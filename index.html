@@ -6,61 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Diagnostico de Caracterizacion SocieEconomica</title>
-
     <!-- CSS de Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/misestilos.css" rel="stylesheet" media="screen">
-
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
-
     <header>
-        <div class="overlay">
-            <h1>Diagnostico de Caracterizacion SocieEconomica</h1>
-            <h3>Secretaria de Participacion Y Desarrollo Social</h3>
-            </p>
+        <div class="container">
+            <div class="overlay">
+                <h1>Diagnostico de Caracterizacion SocieEconomica</h1>
+                <h3>Secretaria de Participacion Y Desarrollo Social</h3>
+                </p>
+            </div>
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- <a class="navbar-brand" href="#">Secretaria de Participacion Y Desarrollo Social</a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Resgitro Nuevo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Consultar Ciudadano</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Reportes</a>
-                </li>
-
-            </ul>
-
-        </div>
-
-        <a href="#" class="btn btn-danger btn-sm">
-            <span class="glyphicon glyphicon-log-out"></span> Cerrar Sesion
-        </a>
-
-    </nav>
 </head>
 
 <body>
-
-
-
-
     <div class="container">
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- inicio de menu -->
+            <!-- <a class="navbar-brand" href="#">Secretaria de Participacion  Y Desarrollo Social</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-warning">
+                            <h5>
+                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                        </h5>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success">
+                        <a class="nav-link" href="#"><h5>Nuevo Registro</h5></a>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success">
+                        <a class="nav-link" href="#"><h5>Consultar Ciudadano</h5></a>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success">
+                        <a class="nav-link" href="#"><h5>Reportes</h5></a>
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <a href="#" class="btn btn-danger btn-lg">
+                <span class="glyphicon glyphicon-log-out">
+                <h5>Cerra Sesion</h5>
+            </span>
+            </a>
+            </nav>
+        </div>
         <form class="form-horizontal" action="">
             <fieldset>
                 <legend>1. Condiciones Sociales</legend>
@@ -69,11 +74,11 @@
 
                         <label class="control-label col-md-2" for="nombre">Nombre:</label>
                         <div class="col-md-4">
-                            <input type="text" class="form-control" id="nombore" name="nombre" placeholder="Nombre" value="" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="" required>
                         </div>
 
 
-                        <label class="control-label col-md-3" for="numid">Numero de Identificacion :</label>
+                        <label class="control-label col-md-3" for="cc">Numero de Identificacion :</label>
                         <div class="col-md-3">
                             <input type="number" class="form-control" id="cc" name="cc" placeholder="CC" required>
 
@@ -82,7 +87,7 @@
                 </div>
                 <div class="form-group">
                     <div class="input-group ">
-                        <label class="control-label col-md-2" for="cel">Celular:</label>
+                        <label class="control-label col-md-2" for="celular">Celular:</label>
                         <div class="col-md-4">
                             <input type="number" class="form-control" id="celular" name="celular" placeholder="Nombre">
                         </div>
@@ -103,7 +108,7 @@
                     <div class="col-md-2">
                         <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad">
                     </div>
-                    <label class="control-label col-md-2" for="est-civ">Estado Civil :</label>
+                    <label class="control-label col-md-2" for="estadocivil">Estado Civil :</label>
                     <div class="col-md-2">
                         <div class="radio">
                             <label><input type="radio" id="estadocivil" name="estadocivil" value="1" checked> Casado</label>
@@ -1059,45 +1064,50 @@
                     </div>
                 </div>
             </fieldset>
-            <>
-                <legend>4. Observaciones</legend>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <label class="control-label col-md-6" for="dependenciaeconomica">Cuantas personas depende economicamnete de su actividad laboral :</label>
-                        <div class="col-md-6">
-                            <div class="text">
-                                <input type="text" class="form-control" name="dependenciaeconomica" id="dependenciaeconomica">
-                            </div>
-                        </div>
-                        <label class="control-label col-md-6" for="tiempomototaxismo"> Cuanto tiempo lleva ejerciendo el mototaxismo:</label>
-                        <div class="col-md-6">
-                            <div class="text">
-                                <input type="text" class="form-control" name="tiempomototaxismo" id="tiempomototaxismo">
-                            </div>
-                        </div>
+            <legend>4. Observaciones</legend>
 
-                        <label class="control-label col-md-4 " for="actividadrentable">
-                             Considera usted que el mototaxismo es una actividad rentable para la economia de su hogar: (Explique)
-                            </label>
-                        <div class="col-md-2">
-                            <div class="radio">
-                                <label><input type="radio" name="actividadrentable" id="actividadrentable" value="si" checked> Si</label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="actividadrentable" id="actividadrentable" value="no"> No</label>
-                            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label class="control-label col-md-6" for="dependenciaeconomica">Cuantas personas depende economicamnete de su actividad laboral :</label>
+                    <div class="col-md-6">
+                        <div class="text">
+                            <!-- <input type="text" class="form-control" name="dependenciaeconomica" id="dependenciaeconomica"> -->
+                            <textarea class="form-control" name="dependenciaeconomica" id="dependenciaeconomica">Enter text here...</textarea>
                         </div>
-                        <div class="col-md-4">
-                            <div class="text">
-                                <input type="text" class="form-control" name="tiempomototaxismo" id="tiempomototaxismo">
-                            </div>
+                    </div>
+                    <label class="control-label col-md-6" for="tiempomototaxismo"> Cuanto tiempo lleva ejerciendo el mototaxismo:</label>
+                    <div class="col-md-6">
+                        <div class="text">
+                            <!-- <input type="text" class="form-control" name="tiempomototaxismo" id="tiempomototaxismo"> -->
+                            <textarea class="form-control" name="tiempomototaxismo" id="tiempomototaxismo">Enter text here...</textarea>
+
                         </div>
-                        <label class="control-label col-md-4 " for="actividadrentable">Fech de Diligenciamiento</label>
-                        <input class="form-control col-md-4 " type="date" name="fechadiligenciamiento">
 
                     </div>
+
+                    <label class="control-label col-md-4 " for="actividadrentable">
+                             Considera usted que el mototaxismo es una actividad rentable para la economia de su hogar: (Explique)
+                            </label>
+                    <div class="col-md-2">
+                        <div class="radio">
+                            <label><input type="radio" name="actividadrentable" id="actividadrentable" value="si" checked> Si</label>
+                        </div>
+                        <div class="radio">
+                            <label></label><input type="radio" name="actividadrentable" id="actividadrentable" value="no"> No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text">
+                            <!-- <input type="textarea" class="form-control" name="tiempomototaxismo" id="tiempomototaxismo"> -->
+                            <textarea class="form-control" name="tiempomototaxismo" id="tiempomototaxismo">Enter text here...</textarea>
+                        </div>
+                    </div>
+                    <label class="control-label col-md-4 " for="actividadrentable">Fecha de Diligenciamiento</label>
+                    <input class="form-control col-md-4 " type="date" name="fechadiligenciamiento">
+
                 </div>
+            </div>
     </div>
 
 
