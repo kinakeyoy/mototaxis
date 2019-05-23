@@ -14,23 +14,26 @@
 </head>
 
 <body>
-
     <div class="login-page">
         <center>
             <button type="button" class="btn btn-info">Secretaria de Participacion y Desarrollo Social</button>
         </center>
+        <div class="error">
+            <span>
+                Datos de Ingreso no validos, Intente de nuevo por favor.
+            </span>
+        </div>
 
-        <div class="form">
-
-            <form class="login-form">
-                <input type="email" placeholder="Usuario" />
-                <input type="password" placeholder="Contraseña" />
-                <button>login</button>
-
+        <div class="form" class="main">
+            <form action="login.php" method="POST" class="login-form" id="formlg">
+                <input type="text" placeholder="Usuario" name="usernamelg" id="usernamelg" />
+                <input type="password" id="passwordlg" name="passwordlg" placeholder="Contraseña" />
+                <input type="submit" class="btn-success" value="Iniciar Sesion" />
             </form>
         </div>
         <center>
-            <button type="button" class="btn btn-info">Desarrollado por <br>Oficina Asesora Informatica<br> Alcaldia de Cartagena</button>
+            <button type="button" class="btn btn-info">Desarrollado por <br>Oficina Asesora Informatica<br> Alcaldia de
+                Cartagena</button>
         </center>
 
     </div>
@@ -41,7 +44,16 @@
     <center>
         <p>Boton De Prueba</p>
         <a href="nuevo.html" <button type="button" class="btn btn-info">Nuevo Registro</button>
-        </center>
+    </center>
+
+
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <!-- <script src="js/index.js"></script> -->
+
+
+
+
+
 </body>
 
 </html>
