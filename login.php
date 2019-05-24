@@ -55,7 +55,7 @@ if (!$conexion->error){
         header('Location: sadmin.html');
         break;
     case 2:
-        header('Location: admin.html');
+        header('Location: nuevoadmin.html');
 		    break;
 	  case 3:
         header('Location: encuesta1.html');

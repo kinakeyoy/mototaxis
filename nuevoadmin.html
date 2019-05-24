@@ -1,3 +1,9 @@
+<?php
+require ('conexion.php');	
+	$query = "SELECT id_estado, estado FROM t_estado ORDER BY estado";
+	$resultado=$mysqli($conexion,$query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +64,7 @@
 <body>
     <div class="container">
         <br>
-        <form class="form-horizontal" action="registrar.php" method="POSTJquery">
+        <form class="form-horizontal" action="cargar.php" method="POST">
             <fieldset>
                 <legend>1. Condiciones Sociales</legend>
                 <div class="form-group">
@@ -66,13 +72,15 @@
 
                         <label class="control-label col-md-2" for="nombre">Nombre:</label>
                         <div class="col-md-4">
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="" pattern="[^'\x22]+"
+                        title="campo no valido" required>
                         </div>
 
 
                         <label class="control-label col-md-3" for="cc">Numero de Identificacion :</label>
                         <div class="col-md-3">
-                            <input type="number" class="form-control" id="cc" name="cc" placeholder="CC" required>
+                            <input type="number" class="form-control" id="cc" name="cc" placeholder="CC"pattern="[^'\x22]+"
+                        title="campo no valido" required>
 
                         </div>
                     </div>
@@ -81,7 +89,8 @@
                     <div class="input-group ">
                         <label class="control-label col-md-2" for="celular">Celular:</label>
                         <div class="col-md-4">
-                            <input type="number" class="form-control" id="celular" name="celular" placeholder="Nombre">
+                            <input type="number" class="form-control" id="celular" name="celular" placeholder="Nombre" pattern="[^'\x22]+"
+                        title="campo no valido" required>
                         </div>
                     </div>
                 </div>
@@ -125,6 +134,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <select class="form-control" id="lugarnac">
+
                             <option value="cartagena">Cartagena</option>
                             <option value="achi">Achi</option>
                             <option value="altos del rosario">Altos Del rosario </option>
@@ -1101,41 +1111,20 @@
                 </div>
             </div>
     </div>
-
-
-
-
-
-
     </div>
     </div>
-
-
-    </fieldset>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-    </div>
-
-
     </fieldset>
     </div>
-
-
-
+    </div>
+    </fieldset>
+    </div>
+    <div class="container">
+    <div class="form-group" class="col-md-12">
+                                <center>
+        <button type="submit" class="btnSubmit btn btn-primary btn-lg btn-block">Enviar Datos</button>
+        </center>
+    </div>
+    </div>
     </form>
     </div>
 
