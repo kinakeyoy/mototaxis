@@ -6,12 +6,19 @@ $db = "mototaxis";
    $conexion = new mysqli($server, $user, $pass, $db);
 //    mysqli_select_db($db,$conexion);
 	if (!$conexion->error){     
-        echo "conectado con base de datos";
-        	echo "<br>";
+echo 
+"<div display='none'>
+    <script type='text/javascript'>
+        console.log('Conectado a base de datos');
+    </script>
+</div>";
     }
     else{
-        echo "Error al tratar de acceder al servidor ";
-        	echo "<br>";
+      "<div display='none'>
+    <script type='text/javascript'>
+        console.log('Error no conecto base de datos');
+    </script>
+</div>";
 	}
 
 // $mysqli=new mysqli($server,$user, $pass, $db);

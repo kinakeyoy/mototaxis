@@ -15,18 +15,28 @@
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color:#008f39;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
 
-.form input {
+ .form input {
     font-family: "Roboto", sans-serif;
     outline: 0;
-    background: #f2f2f2;
+    background: #f2f9f3;
     width: 100%;
     border: 0;
     margin: 0 0 15px;
     padding: 15px;
     box-sizing: border-box;
-    font-size: 12px;
-}
+    font-size: 14px;
+} 
+
 
 .form button {
     font-family: "Roboto", sans-serif;
