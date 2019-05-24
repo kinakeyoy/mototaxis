@@ -1,10 +1,10 @@
 <?php
-require ('conexion.php');	
+include 'conexion.php';
+	$querymunicipios = "SELECT id_municipio, nomb_municipio FROM Municipios";
+	$resultadomunicipios=mysqli_query($conexion,$querymunicipios);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,18 +47,11 @@ require ('conexion.php');
                     <a class="btn btn-outline-danger" href="index.html" role="button">Cerrar Sesion</a>
                 </li>
 
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                    <a href="index.html">
-                        <button class="btn btn-outline-danger my-2 my-sm-0">Cerrar Sesion</button>
-                    </a>
-                </form> -->
-        </div>
+            </ul>        
     </nav>
 </div>
 <!-- Navbar Menu fin -->
 </head>
-
 <body>
     <div class="container">
         <br>
@@ -73,21 +66,19 @@ require ('conexion.php');
                             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="" pattern="[^'\x22]+"
                         title="campo no valido" required>
                         </div>
-
-
                         <label class="control-label col-md-3" for="cc">Numero de Identificacion :</label>
                         <div class="col-md-3">
                             <input type="number" class="form-control" id="cc" name="cc" placeholder="CC"pattern="[^'\x22]+"
-                        title="campo no valido" required>
+                             title="campo no valido" required>
 
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
+                    </div>
+                    <div class="form-group">
                     <div class="input-group ">
                         <label class="control-label col-md-2" for="celular">Celular:</label>
                         <div class="col-md-4">
-                            <input type="number" class="form-control" id="celular" name="celular" placeholder="Nombre" pattern="[^'\x22]+"
+                            <input type="number" class="form-control" id="celular" name="celular" placeholder="Celular" pattern="[^'\x22]+"
                         title="campo no valido" required>
                         </div>
                     </div>
@@ -127,21 +118,17 @@ require ('conexion.php');
 
                     </div>
                     <!--    select llenado con  la tabla tbl_municipios -->
-
                     <label class="control-label col-md-2" for="lugarnac">Lugar de nacimiento :</label>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <select class="form-control" id="lugarnac">
-                            <?php
-                                $query = "SELECT id_municipio, nomb_municipio, estado FROM Municipios";
-                                $resultado=$mysqli($conexion,$query);  
-                                while($row = $resultado->fetch_assoc())
-                                 {?>
-                                    <option value="<?php echo $row['id_municipio']; ?>">
-                                        <?php echo $row['nomb_municipio']; ?>
-                                    </option>
-                                <?php } ?> 
+                            <select class="form-control" name="lugarnacimiento" id="lugarnacimiento">
+                            <?php 
+                              while($row = $resultadomunicipios->fetch_assoc()) { 
                             ?>
+                              	<option value="<?php echo $row['id_municipio']; ?>">
+                                  <?php echo $row['nomb_municipio']; ?>
+                                </option>
+            				<?php }   ?>                            	                                                    
                             <!-- <option value="cartagena">Cartagena</option>
                             <option value="achi">Achi</option>
                             <option value="altos del rosario">Altos Del rosario </option>
@@ -769,7 +756,6 @@ require ('conexion.php');
                         </label>
                     </div>
                 </div>
-
             </fieldset>
 
             <fieldset>
@@ -778,16 +764,13 @@ require ('conexion.php');
                     <div class="input-group">
                         <label class="control-label col-md-3" for="ingresosfamiliar">Ingresos mensuales generados por el grupo familiar:</label>
                         <div class="col-md-3">
-                            <select class="form-control" id="imensuales">
+                        <select class="form-control" id="imensuales">
                             <option value="1"> 0 - 414.058 (0.5 Smlv)</option>
                             <option value="2"> 414.058 - 828.116  (1 Smlv)</option>
                             <option value="3"> 828.116 - 1.242.174(1.5 Smlv)</option>
                             <option value="4"> 1.242.174 - 1.656.232(2 Smlv))</option>                            
                         </select>
                         </div>
-
-
-
                         <label class="control-label col-md-3" for="otrosingresosfamiliar">Otros Ingresos que recibe el nucleo familiar:</label>
                         <div class="col-md-3">
                             <select class="form-control" id="imensuales">
@@ -1127,7 +1110,7 @@ require ('conexion.php');
     </div>
     <div class="container">
     <div class="form-group" class="col-md-12">
-                                <center>
+        <center>
         <button type="submit" class="btnSubmit btn btn-primary btn-lg btn-block">Enviar Datos</button>
         </center>
     </div>

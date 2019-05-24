@@ -14,7 +14,7 @@ echo
 </div>";
     }
     else{
-      "<div display='none'>
+      echo "<div display='none'>
     <script type='text/javascript'>
         console.log('Error no conecto base de datos');
     </script>
