@@ -6,24 +6,24 @@ $db = "mototaxis";
    $conexion = new mysqli($server, $user, $pass, $db);
    mysqli_set_charset($conexion,"utf8");
 //    mysqli_select_db($db,$conexion);
-	if (!$conexion->error){     
-echo 
-"<div display='none'>
-    <script type='text/javascript'>
-        console.log('Conectado a base de datos');
-    </script>
-</div>";
-    }
-    else{
-      echo "<div display='none'>
-    <script type='text/javascript'>
-        console.log('Error no conecto base de datos');
-    </script>
-</div>";
-	}
+// 	if (!$conexion->error){     
+// echo 
+// "<div display='none'>
+//     <script type='text/javascript'>
+//         console.log('Conectado a base de datos');
+//     </script>
+// </div>";
+//     }
+//     else{
+//       echo "<div display='none'>
+//     <script type='text/javascript'>
+//         console.log('Error no conecto base de datos');
+//     </script>
+// </div>";
+// 	}
 
-// $mysqli=new mysqli($server,$user, $pass, $db);
-// if($mysqli):
-//     echo "Error al conectarse con Mysql debido al error".$mysqli->connect_error;
-// endif;
-?>
+// // $mysqli=new mysqli($server,$user, $pass, $db);
+// // if($mysqli):
+// //     echo "Error al conectarse con Mysql debido al error".$mysqli->connect_error;
+// // endif;
+// ?>
