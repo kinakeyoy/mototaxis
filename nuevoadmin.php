@@ -1,7 +1,13 @@
 <?php
 include 'conexion.php';
 	$querymunicipios = "SELECT id_municipio, nomb_municipio FROM Municipios";
-	$resultadomunicipios=mysqli_query($conexion,$querymunicipios);
+    $resultadomunicipios=mysqli_query($conexion,$querymunicipios);
+    $queryreligion = "SELECT id_religion, nomb_religion FROM religion";
+    $resultadoreligion=mysqli_query($conexion,$queryreligion);
+    $querybarrios = "SELECT id_barrio, nomb_barrio FROM barrios";
+    $resultadobarrios=mysqli_query($conexion,$querybarrios);
+    
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -142,11 +148,19 @@ include 'conexion.php';
                         <div class="form-group">
                             <!--    select llenado con la tabla tbl_Religion campo id_eligion -->
                             <select class="form-control" id="religion">
-                                    <option value="cartagena">Catolico</option>
+                            <?php 
+                              while($row1 = $resultadoreligion->fetch_assoc()) { 
+                            ?>
+                              	<option value="<?php echo $row1['id_religion']; ?>">
+                                  <?php echo $row1['nomb_religion']; ?>
+                                </option>
+            				<?php }   ?>
+
+                                    <!-- <option value="cartagena">Catolico</option>
                                     <option value="achi">Evangelico</option>
                                     <option value="altos del rosario">Protestante </option>
                                     <option value="arenal">Judio</option>
-                                    <option value="...">Ninguna</option>
+                                    <option value="...">Ninguna</option> -->
                                 </select>
                         </div>
                     </div>
@@ -155,11 +169,18 @@ include 'conexion.php';
                     <div class="col-md-4">
                         <div class="form-group">
                             <select class="form-control" id="barrio">
-                                    <option value="cartagena">San Francisco</option>
+                                       <?php 
+                              while($row = $resultadobarrios->fetch_assoc()) { 
+                            ?>
+                              	<option value="<?php echo $row['id_barrio']; ?>">
+                                  <?php echo $row['nomb_barrio']; ?>
+                                </option>
+            				<?php }   ?> 
+                                    <!-- <option value="cartagena">San Francisco</option>
                                     <option value="achi">La Maria</option>
                                     <option value="altos del rosario">La Esperanza </option>
                                     <option value="arenal">Paraiso</option>
-                                    <option value="...">...</option>
+                                    <option value="...">...</option> -->
                                 </select>
                         </div>
                     </div>
@@ -256,9 +277,9 @@ include 'conexion.php';
                         <div class="form-group">
                             <select class="form-control" id="eps">
                                              
-                                <option value="ambuq">AMBUQ</option>
-                                <option value="cajacopi">Cajacopi</option>
-                                <option value="comfacor">Comfacor</option>                                
+                                <option value="1">AMBUQ</option>
+                                <option value="1">Cajacopi</option>
+                                <option value="1">Comfacor</option>                                
                                 <option value="comfasucre">Comfasucre</option>
                                 <option value="comparta">Comparta</option>
                                 <option value="coosalud">Coosalud</option>
@@ -334,7 +355,7 @@ include 'conexion.php';
                                 <option value="porvenir">Porvenir</option>
                                 <option value="proteccion">Proteccion</option>
                                 <option value="oldmutual">Old Mutual</option>
-                                <option value="caxdac">ACDAC CAXDAC</option>
+                                <option value="caxdac">ACDAC Asociacion Colombiana de Aviadores Civiles</option>
                                 <option value="FONPRECON">FONPRECON</option>
                                 <option value="PENSIONES DE ANTIOQUIA">PENSIONES DE ANTIOQUIA</option>
                                 <option value="ECOPETROL">ECOPETROL</option>

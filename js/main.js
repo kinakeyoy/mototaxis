@@ -4,14 +4,14 @@ $(document).ready(function () {
     event.preventDefault();
 
     $.ajax({
-      url: 'login.php',
-      type: 'POST',
-      dataType: 'json',
-      data: $(this).serialize(),
-      beforeSend: function () {
+        url: 'login.php',
+        type: 'POST',
+        dataType: 'json',
+        data: $(this).serialize(),
+        beforeSend: function () {
 
-      }
-    })
+        }
+      })
       .done(function (respuesta) {
         console.log(respuesta);
       })
@@ -23,4 +23,3 @@ $(document).ready(function () {
       });
   })
 });
-

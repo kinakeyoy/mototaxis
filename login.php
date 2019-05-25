@@ -11,7 +11,7 @@ if (!$conexion->error){
 		while($row = mysqli_fetch_array($result))
 		 {
        // $row es un array con todos los campos existentes en la tabla
-		  if (($usernamelg==$row['nomusuario'])&&($passwordlg==$row['Pass']))
+		  if (($usernamelg==$row['nom_usuario'])&&($passwordlg==$row['Pass']))
       {
 			 $perfil=$row['id_perfil'];
 		//   echo "<br>";	

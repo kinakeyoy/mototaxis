@@ -4,6 +4,7 @@ $pass = "";
 $server = "localhost";
 $db = "mototaxis";
    $conexion = new mysqli($server, $user, $pass, $db);
+   mysqli_set_charset($conexion,"utf8");
 //    mysqli_select_db($db,$conexion);
 	if (!$conexion->error){     
 echo 
