@@ -121,6 +121,8 @@ body {
     background-image: url("http://st.gde-fon.com/wallpapers_original/408829_motocikl_motociklist_gorod_doroga_motocikly_1680x1050_www.Gde-Fon.com.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
+    width: auto;
+    height: auto;
     /* background-position: 50px 50px; */
     background-position: center;
     opacity: 0.9;

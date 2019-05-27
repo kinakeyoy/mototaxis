@@ -3,84 +3,108 @@
 
 <head>
     <meta charset="utf-8">
+    </meta>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </meta>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Diagnostico de Caracterizacion SocieEconomica</title>
+    </meta>
+
+    <title>
+        Diagnostico de Caracterizacion SocieEconomica
+    </title>
+
     <!-- CSS de Bootstrap -->
+
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </link>
+
     <link href="css/estilo-login.css" rel="stylesheet" media="screen">
+    </link>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 </head>
 
-<body background="/img/mototaxistas-cartagena.jpg">
-    <div class="login-page">
-        <center>
-            <button type="button" class="btn btn-info">Secretaria de Participacion y Desarrollo Social</button>
-        </center>
-        <!-- <div class="error">
+<body>
+    <div class=".col xlg">
+        <div class="login-page">
+            <center>
+                <button type="button" class="btn btn-info">
+                    Secretaria de Participacion y Desarrollo Social
+                </button>
+            </center>
+
+            <!-- <div class="error">
             <span>
                 Datos de Ingreso no validos, Intente de nuevo por favor.
             </span>
         </div> -->
 
-        <div class="form">
-            <form method="POST" class="login-form" id="formlg">
-                <div class="form-group">
-                    <!-- <input> NO PUEDE contener los siguientes caracteres: 'o " -->
-                    <input type="text" value="kinakeyoy" placeholder="Usuario" name="usernamelg" id="usernamelg"
-                        pattern="[^'\x22]+" title="campo no valido" required />
-                </div>
-                <div class="form-group">
-                    <input type="password" id="passwordlg" name="passwordlg" placeholder="Contraseña"
-                        pattern="[^'\x22]+" title="campo no valido" required />
-                </div>
-                <div class="form-group">
-                    <button type="button" class="btnSubmit" id="btnLogin">inicar sesion</button>
-                </div>
-                <!-- <input type="submit" value="Iniciar Sesion" /> -->
-            </form>
+            <div class="form">
+                <form method="POST" class="login-form" id="formlg">
+                    <div class="form-group">
+                        <!-- <input> NO PUEDE contener los siguientes caracteres: 'o " -->
+
+                        <input type="text" value="kinakeyoy" placeholder="Usuario" name="usernamelg" id="usernamelg"
+                            pattern="[^'\x22]+" title="campo no valido" required="required"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="passwordlg" name="passwordlg" placeholder="Contraseña"
+                            pattern="[^'\x22]+" title="campo no valido" required="required"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" class="btnSubmit" id="btnLogin">inicar sesion</button>
+                    </div>
+
+                    <!-- <input type="submit" value="Iniciar Sesion" /> -->
+                </form>
+            </div>
+
+            <section id="resultado" style="color:brown" class="h1"></section>
+
+            <center>
+                <button type="button" class="btn btn-info">
+                    Desarrollado por
+
+                    <br>
+                    Oficina Asesora
+                    Informatica
+
+                    <br>
+                    Alcaldia de
+                    Cartagena
+                </button>
+            </center>
         </div>
-        <section id="resultado" style="color:brown" class="h1"></section>
 
-        <button id="button1" type="button">Swal</button>
-
-        <center>
-            <button type="button" class="btn btn-info">Desarrollado por <br>Oficina Asesora
-                Informatica<br> Alcaldia de
-                Cartagena</button>
-        </center>
-
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <!-- <center>
+        <br>
+        <br>
+        <br>
+        <!-- <center>
         <p>Boton De Prueba</p>
         <a href="nuevo.html" <button type="button" class="btn btn-info">Nuevo Registro</button>
     </center> -->
 
+        <script type="text/javascript" src="./js/main.js"></script>
 
-    <script type="text/javascript" src="./js/main.js"></script>
-    <!-- <script src="./js/jquery-3.1.1.min.js" type="text/javascript"></script> -->
+        <!-- <script src="./js/jquery-3.1.1.min.js" type="text/javascript"></script> -->
+        <!-- <script src="js/index.js"></script> -->
 
-    <!-- <script src="js/index.js"></script> -->
-
-
-
-    <script>
-        // $(document).ready(function () {
+        <script>
+            // $(document).ready(function () {
         //     $("#btnLogin").click(function () {
         //         console.log('Hola login');
         //     })
         // });
-    </script>
-
+        </script>
+    </div>
 </body>
 
 </html>

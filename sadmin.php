@@ -1,26 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <?php 
-    session start();
-    $_session['P_usuario']=localStorage.getItem(perfil);
-    if ( $_session['P_usuario']==1)
-    {
-      echo "<div display='none'>
-    <script type='text/javascript'>
-        console.log('perfil desdesadmin ', perfil);
-    </script>
-</div>";
-    }
-    else
-    {
-        echo "<div display='none'>
-            <script type='text/javascript'>
-                console.log('No perfil desdesadmin ', perfil);
-            </script>
-        </div>";
-
-    }
-?> -->
 
 <head>
     <meta charset="utf-8">
@@ -43,9 +22,6 @@
 
     <link href="css/misestilos.css" rel="stylesheet" media="screen">
     </link>
-    <!-- libreria de swat alert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
 
@@ -116,22 +92,6 @@
 </head>
 
 <body>
-    <script type='text/javascript'>
-        var perfil = localStorage.getItem("perfil");
-
-        if (perfil != 1) {
-
-            console.log('Diferente de 1');
-            console.log(perfil);
-            swal("ERROR !!", "Modulo Restringido para su usuario");
-            window.location.href = "index.html";
-        }
-        else {
-            console.log('else perfil');
-            console.log(perfil);
-        }
-
-    </script>
     <div class="container">
         <br>
 
