@@ -1,26 +1,10 @@
+<?php
+    require("conector.php");
+    $conn = new ConectorBD();
+    $conn->initConexion("mototaxis");
+?>
 <!DOCTYPE html>
 <html lang="en">
-<!-- <?php 
-    session start();
-    $_session['P_usuario']=localStorage.getItem(perfil);
-    if ( $_session['P_usuario']==1)
-    {
-      echo "<div display='none'>
-    <script type='text/javascript'>
-        console.log('perfil desdesadmin ', perfil);
-    </script>
-</div>";
-    }
-    else
-    {
-        echo "<div display='none'>
-            <script type='text/javascript'>
-                console.log('No perfil desdesadmin ', perfil);
-            </script>
-        </div>";
-
-    }
-?> -->
 
 <head>
     <meta charset="utf-8">
@@ -43,10 +27,9 @@
 
     <link href="css/misestilos.css" rel="stylesheet" media="screen">
     </link>
+
     <!-- libreria de swat alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
 
     <header>
@@ -116,11 +99,9 @@
 </head>
 
 <body>
-    <script type='text/javascript'>
+    <script type="text/javascript">
         var perfil = localStorage.getItem("perfil");
-
         if (perfil != 1) {
-
             console.log('Diferente de 1');
             console.log(perfil);
             swal("ERROR !!", "Modulo Restringido para su usuario");
@@ -130,8 +111,8 @@
             console.log('else perfil');
             console.log(perfil);
         }
-
     </script>
+
     <div class="container">
         <br>
 
@@ -163,7 +144,7 @@
 
                         <div class="col-md-4">
                             <input type="number" class="form-control" id="celular" name="celular"
-                                placeholder="Nombre"></input>
+                                placeholder="Celular"></input>
                         </div>
                     </div>
                 </div>
@@ -244,22 +225,24 @@
                     </div>
 
                     <!-- select llenado con  la tabla tbl_municipios -->
-
                     <label class="control-label col-md-2" for="lugarnac">Lugar de nacimiento :</label>
 
                     <div class="col-md-4">
                         <div class="form-group">
                             <select class="form-control" id="lugarnac">
-                                <option value="cartagena">Cartagena</option>
-
-                                <option value="achi">Achi</option>
-
-                                <option value="altos del rosario">Altos Del rosario</option>
-
-                                <option value="arenal">Arenal</option>
-
-                                <option value="...">...</option>
+                                <?php
+                                        $consultamunicipios = "SELECT * FROM municipios";
+                                        echo $consultamunicipios;
+                                        $resultado= $conn->ejecutarQuery($consultamunicipios);
+                            
+                                        while($row=mysqli_fetch_array($resultado))
+                                             {?>
+                                <option value="<?php echo $row["id_municipio"] ?> ">
+                                    <?php echo $row["nomb_municipio"]      ?>
+                                </option>
+                                <?php } ?>
                             </select>
+
                         </div>
                     </div>
 

@@ -4,21 +4,25 @@
 <head>
     <meta charset="utf-8">
     </meta>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     </meta>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     </meta>
+
     <title>
         Diagnostico de Caracterizacion SocieEconomica
     </title>
+
     <!-- CSS de Bootstrap -->
+    <script src="/js/jquery-3.1.1.min.js"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     </link>
+
     <link href="css/misestilos.css" rel="stylesheet" media="screen">
     </link>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- librerías SwetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -26,7 +30,9 @@
     <header>
         <div class="container">
             <br>
+
             <img width="100%" src="img/banner-f.png">
+
             <h3>
                 Diagnostico de Caracterizacion SocieEconomica
             </h3>
@@ -44,13 +50,17 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="#">
-                    MotoSoft-<strong>SuperAdmin</strong>
+                    MotoSoft-
+
+                    <strong>SuperAdmin</strong>
                 </a>
 
                 <ul class="navbar-nav  nav-tabs mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="sadmin.html">
-                            Nuevo<span class="sr-only">(current)</span>
+                            Nuevo
+
+                            <span class="sr-only">(current)</span>
                         </a>
                     </li>
 
@@ -84,11 +94,10 @@
 </head>
 
 <body>
-
-
     <div class="container">
         <br>
-        <form class="form-horizontal" method="POST" action="registraradmin.php" id="frmajax" name="frmajax">
+
+        <form class="form-horizontal" method="POST" name="frmajax">
             <fieldset>
                 <legend>Crear Administrador</legend>
                 <div class="form-group">
@@ -112,7 +121,6 @@
 
                         <div class="col-md-6">
                             <select class="form-control" id="perfil" name="perfil">
-                                <option value="2">Administrador</option>
                                 <option value="3">Encuestador</option>
                             </select>
                         </div>
@@ -129,17 +137,35 @@
                     <br>
                     <div class="input-group">
                         <div class="col-md-8">
-                            <button name="#btnguardar" id="#btnguardar"
+                            <button name="#btnregistrar" id="#btnregistrar"
                                 class="btn btn-success btn-lg btn-block">Guardar</button>
                         </div>
                     </div>
             </fieldset>
         </form>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#btnregistrar").click(function () {
+                    var datos = $("#frmajax").serialize();
+                    alert(datos);
+                    return false;
+                    $.ajax({
+                        type: "POST",
+                        url: "registraradmin.php",
+                        data: datos,
+                        success: function () {
 
+                        }
+                    });
+                });
+            });
 
-        <!-- <script type="text/javascript" src="./js/regadmin.js"></script> -->
+        </script>
+        <!-- 
+        <script type="text/javascript" src="./js/regadmin.js"></script> -->
+
         <!-- Librería jQuery requerida por los plugins de JavaScript -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+        <script src="http://code.jquery.com/jquery.js"></script>
         <!-- Todos los plugins JavaScript de Bootstrap (también puedes
          incluir archivos JavaScript individuales de los únicos
          plugins que utilices) -->

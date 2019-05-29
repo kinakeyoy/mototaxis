@@ -1,6 +1,5 @@
 <?php
-   include("conexion.php");
- 
+   include("conexion.php"); 
 
     $peticionUsuario = "select * from usuarios";
     $resultadoUsuario = mysqli_query($conexion, $peticionUsuario);
@@ -10,5 +9,3 @@
     }
    
    echo json_encode($array);
-  
-  

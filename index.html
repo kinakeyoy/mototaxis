@@ -26,7 +26,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!-- librerías SwetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
@@ -44,35 +44,27 @@
                 Datos de Ingreso no validos, Intente de nuevo por favor.
             </span>
         </div> -->
-
             <div class="form">
                 <form method="POST" class="login-form" id="formlg">
                     <div class="form-group">
                         <!-- <input> NO PUEDE contener los siguientes caracteres: 'o " -->
-
-                        <input type="text" value="kinakeyoy" placeholder="Usuario" name="usernamelg" id="usernamelg"
-                            pattern="[^'\x22]+" title="campo no valido" required="required"></input>
+                        <input type="text" placeholder="Usuario" name="usernamelg" id="usernamelg" pattern="[^'\x22]+"
+                            title="campo no valido" required="required"></input>
                     </div>
-
                     <div class="form-group">
                         <input type="password" id="passwordlg" name="passwordlg" placeholder="Contraseña"
                             pattern="[^'\x22]+" title="campo no valido" required="required"></input>
                     </div>
-
                     <div class="form-group">
                         <button type="button" class="btnSubmit" id="btnLogin">inicar sesion</button>
                     </div>
-
                     <!-- <input type="submit" value="Iniciar Sesion" /> -->
                 </form>
             </div>
-
             <section id="resultado" style="color:brown" class="h1"></section>
-
             <center>
                 <button type="button" class="btn btn-info">
                     Desarrollado por
-
                     <br>
                     Oficina Asesora
                     Informatica

@@ -1,3 +1,8 @@
+<?php
+    require("conector.php");
+    $conn = new ConectorBD();
+    $conn->initConexion("mototaxis");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +28,8 @@
     <link href="css/misestilos.css" rel="stylesheet" media="screen">
     </link>
 
+    <!-- libreria de swat alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
 
     <header>
@@ -92,6 +99,20 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        var perfil = localStorage.getItem("perfil");
+        if (perfil != 1) {
+            console.log('Diferente de 1');
+            console.log(perfil);
+            swal("ERROR !!", "Modulo Restringido para su usuario");
+            window.location.href = "index.html";
+        }
+        else {
+            console.log('else perfil');
+            console.log(perfil);
+        }
+    </script>
+
     <div class="container">
         <br>
 
@@ -123,7 +144,7 @@
 
                         <div class="col-md-4">
                             <input type="number" class="form-control" id="celular" name="celular"
-                                placeholder="Nombre"></input>
+                                placeholder="Celular"></input>
                         </div>
                     </div>
                 </div>
@@ -204,22 +225,24 @@
                     </div>
 
                     <!-- select llenado con  la tabla tbl_municipios -->
-
                     <label class="control-label col-md-2" for="lugarnac">Lugar de nacimiento :</label>
 
                     <div class="col-md-4">
                         <div class="form-group">
                             <select class="form-control" id="lugarnac">
-                                <option value="cartagena">Cartagena</option>
-
-                                <option value="achi">Achi</option>
-
-                                <option value="altos del rosario">Altos Del rosario</option>
-
-                                <option value="arenal">Arenal</option>
-
-                                <option value="...">...</option>
+                                <?php
+                                        $consultamunicipios = "SELECT * FROM municipios";
+                                        echo $consultamunicipios;
+                                        $resultado= $conn->ejecutarQuery($consultamunicipios);
+                            
+                                        while($row=mysqli_fetch_array($resultado))
+                                             {?>
+                                <option value="<?php echo $row["id_municipio"] ?> ">
+                                    <?php echo $row["nomb_municipio"]      ?>
+                                </option>
+                                <?php } ?>
                             </select>
+
                         </div>
                     </div>
 
@@ -230,15 +253,16 @@
                             <!-- select llenado con la tabla tbl_Religion campo id_eligion -->
 
                             <select class="form-control" id="religion">
-                                <option value="cartagena">Catolico</option>
-
-                                <option value="achi">Evangelico</option>
-
-                                <option value="altos del rosario">Protestante</option>
-
-                                <option value="arenal">Judio</option>
-
-                                <option value="...">Ninguna</option>
+                                <?php
+                                $consultareligiones = "SELECT * FROM religiones";
+                                echo $consultareligiones;
+                                $resultadoreligiones= $conn->ejecutarQuery($consultareligiones);
+                                while($row=mysqli_fetch_array($resultadoreligiones))
+                                {?>
+                                <option value="<?php echo $row["id_religion"] ?> ">
+                                    <?php echo $row["nomb_religion"] ?>
+                                </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -250,15 +274,16 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <select class="form-control" id="barrio">
-                                <option value="cartagena">San Francisco</option>
-
-                                <option value="achi">La Maria</option>
-
-                                <option value="altos del rosario">La Esperanza</option>
-
-                                <option value="arenal">Paraiso</option>
-
-                                <option value="...">...</option>
+                                <?php
+                                    $consultabarrios = "SELECT * FROM barrios";
+                                    echo $consultabarrios;
+                                    $resultadobarrios= $conn->ejecutarQuery($consultabarrios);
+                                    while($row=mysqli_fetch_array($resultadobarrios))
+                                    {?>
+                                <option value="<?php echo $row["id_barrio"] ?> ">
+                                    <?php echo $row["nomb_barrio"] ?>
+                                </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -269,15 +294,10 @@
                         <div class="form-group">
                             <select class="form-control" id="estrato">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="2">2</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
                             </select>
                         </div>
@@ -294,31 +314,18 @@
                         <div class="form-group">
                             <select class="form-control" id="personashogar" name="personashogar">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="2">2</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
-
                                 <option value="7">7</option>
-
                                 <option value="8">8</option>
-
                                 <option value="9">9</option>
-
                                 <option value="10">10</option>
-
                                 <option value="12">12</option>
-
                                 <option value="13">13</option>
-
                                 <option value="14">14</option>
-
                                 <option value="15">15</option>
                             </select>
                         </div>
@@ -330,31 +337,18 @@
                         <div class="form-group">
                             <select class="form-control" id="personascargo" name="personascargo" value="">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="2">2</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
-
                                 <option value="7">7</option>
-
                                 <option value="8">8</option>
-
                                 <option value="9">9</option>
-
                                 <option value="10">10</option>
-
                                 <option value="12">12</option>
-
                                 <option value="13">13</option>
-
                                 <option value="14">14</option>
-
                                 <option value="15">15</option>
                             </select>
                         </div>
@@ -369,31 +363,18 @@
                         <div class="form-group">
                             <select class="form-control" id="personastrabajan" name="personastrabajan" value="">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="2">2</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
-
                                 <option value="7">7</option>
-
                                 <option value="8">8</option>
-
                                 <option value="9">9</option>
-
                                 <option value="10">10</option>
-
                                 <option value="12">12</option>
-
                                 <option value="13">13</option>
-
                                 <option value="14">14</option>
-
                                 <option value="15">15</option>
                             </select>
                         </div>
@@ -408,8 +389,8 @@
                         <div class="form-group">
                             <select class="form-control" id="regimenseguridadsocial" name="regimenseguridadsocial">
                                 <option value="1">Contributivo</option>
-
                                 <option value="2">Subsidiado</option>
+                                <option value="3">Ninguno</option>
                             </select>
                         </div>
                     </div>
@@ -421,33 +402,16 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" id="eps">
-                                <option value="ambuq">AMBUQ</option>
-
-                                <option value="cajacopi">Cajacopi</option>
-
-                                <option value="comfacor">Comfacor</option>
-
-                                <option value="comfasucre">Comfasucre</option>
-
-                                <option value="comparta">Comparta</option>
-
-                                <option value="coosalud">Coosalud</option>
-
-                                <option value="emdisalud">Emdisalud</option>
-
-                                <option value="mutualser">Mutual ser</option>
-
-                                <option value="nuevaeps">Nueva Eps</option>
-
-                                <option value="saludvida">Salud Vida</option>
-
-                                <option value="cafesalud">Cafe Salud</option>
-
-                                <option value="coomeva">Coomeva</option>
-
-                                <option value="salud-total">Salud Total</option>
-
-                                <option value="sanitas">Sanitas</option>
+                                <?php
+                                $consultaeps = "SELECT * FROM eps";
+                                echo $consultaeps;
+                                $resultadoeps= $conn->ejecutarQuery($consultaeps);
+                                while($row=mysqli_fetch_array($resultadoeps))
+                                {?>
+                                <option value="<?php echo $row["id_eps"] ?> ">
+                                    <?php echo $row["nomb_eps"] ?>
+                                </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -481,63 +445,34 @@
                         <div class="form-group">
                             <select class="form-control" id="tiempoension">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
-
                                 <option value="7">7</option>
-
                                 <option value="8">8</option>
-
                                 <option value="9">9</option>
-
                                 <option value="10">10</option>
-
                                 <option value="11">11</option>
-
                                 <option value="12">12</option>
-
                                 <option value="13">13</option>
-
                                 <option value="14">14</option>
-
                                 <option value="15">15</option>
-
                                 <option value="16">16</option>
-
                                 <option value="17">17</option>
-
                                 <option value="18">18</option>
-
                                 <option value="19">19</option>
-
                                 <option value="20">20</option>
-
                                 <option value="21">21</option>
-
                                 <option value="22">22</option>
-
                                 <option value="23">23</option>
-
                                 <option value="24">24</option>
-
                                 <option value="25">25</option>
-
                                 <option value="26">26</option>
-
                                 <option value="27">27</option>
-
                                 <option value="28">28</option>
-
                                 <option value="29">29</option>
-
                                 <option value="30">30</option>
                             </select>
                         </div>
@@ -550,27 +485,16 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" id="fpension">
-                                <option value="colpensiones">Colpensiones</option>
-
-                                <option value="colfondos">Confondos</option>
-
-                                <option value="porvenir">Porvenir</option>
-
-                                <option value="proteccion">Proteccion</option>
-
-                                <option value="oldmutual">Old Mutual</option>
-
-                                <option value="caxdac">ACDAC CAXDAC</option>
-
-                                <option value="FONPRECON">FONPRECON</option>
-
-                                <option value="PENSIONES DE ANTIOQUIA">PENSIONES DE ANTIOQUIA</option>
-
-                                <option value="ECOPETROL">ECOPETROL</option>
-
-                                <option value="magisterio">
-                                    FONDO DE PRESTACIONES SOCIALES DEL MAGISTERIO
+                                <?php
+                                    $consultapensiones = "SELECT * FROM fondopensiones";
+                                    echo $consultapensiones;
+                                    $resultadopensiones= $conn->ejecutarQuery($consultapensiones);
+                                    while($row=mysqli_fetch_array($resultadopensiones))
+                                     {?>
+                                <option value="<?php echo $row["id_fondo_pension"] ?> ">
+                                    <?php echo $row["nomb_fondo_pension"] ?>
                                 </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -582,17 +506,16 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" id="fpension">
-                                <option value="1">Bachiller</option>
-
-                                <option value="2">Tecnico</option>
-
-                                <option value="3">tecnologo</option>
-
-                                <option value="4">profesional</option>
-
-                                <option value="5">Postgrado</option>
-
-                                <option value="6">Ninguno</option>
+                                <?php
+                                 $consultaniveles = "SELECT * FROM niveleseducativos";
+                                 echo $consultaniveles;
+                                 $resultadoniveles= $conn->ejecutarQuery($consultaniveles);
+                                 while($row=mysqli_fetch_array($resultadoniveles))
+                                 {?>
+                                <option value="<?php echo $row["id_nivel_educativo"] ?> ">
+                                    <?php echo $row["nomb_nivel_educativo"] ?>
+                                </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -603,25 +526,15 @@
                         <div class="form-group">
                             <select class="form-control" id="tiempoterminado">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
-
                                 <option value="7">7</option>
-
                                 <option value="8">8</option>
-
                                 <option value="9">9</option>
-
                                 <option value="10">10</option>
-
                                 <option value="11">11</option>
                             </select>
                         </div>
@@ -634,13 +547,16 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" id="idtitulo">
-                                <option value="1">Ingenieria de sistemas</option>
-
-                                <option value="2">Medico</option>
-
-                                <option value="3">Abogado</option>
-
-                                n
+                                <?php
+                                $consultatitulos = "SELECT * FROM titulosobtenidos";
+                                echo $consultatitulos;
+                                $resultadotitulos= $conn->ejecutarQuery($consultatitulos);
+                                while($row=mysqli_fetch_array($resultadotitulos))
+                                {?>
+                                <option value="<?php echo $row["id_titulo"] ?> ">
+                                    <?php echo $row["nomb_titulo"] ?>
+                                </option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>

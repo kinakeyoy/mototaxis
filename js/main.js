@@ -7,7 +7,6 @@ $(document).ready(function () {
       data: formulario
     }).done(function (datos) {
       let data = JSON.parse(datos)[0];
-
       // console.log('Datos del uusario', data);
       let formData = formulario.split("=");
       let formData2 = formData[1].split("&");
@@ -34,7 +33,7 @@ $(document).ready(function () {
       }
 
       if (valor == true && perfil == 1) {
-        window.location.href = "sadmin.html";
+        window.location.href = "sadmin.php";
         console.log('Valor: ', valor);
       } else if (valor == true && perfil == 2) {
         window.location.href = "admin.html";

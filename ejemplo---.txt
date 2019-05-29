@@ -1,0 +1,16 @@
+   <!-- <?php
+                                  consultamunicipios = "SELECT (id_municipio, nomb_municipio) FROM municipios";
+                                  $resultado=$mysqli($conexion,$consultamunicipios);  
+                                  while($row = $resultado->fetch_assoc())
+                                  {?
+
+                                <option value=" <?php echo "loquesea"; ?>
+
+                                </option>">
+
+
+
+                                    <?php echo $row['nomb_municipio']; ?>
+                                </option>
+
+                                <?php } ?> -->
