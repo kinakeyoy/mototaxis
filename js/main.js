@@ -36,10 +36,10 @@ $(document).ready(function () {
         window.location.href = "sadmin.php";
         console.log('Valor: ', valor);
       } else if (valor == true && perfil == 2) {
-        window.location.href = "admin.html";
+        window.location.href = "admin.php";
         console.log('Valor: ', valor);
       } else if (valor == true && perfil == 3) {
-        window.location.href = "encuesta1.html";
+        window.location.href = "encuesta1.php";
         console.log('Valor: ', valor);
       } else {
         // alert('Usuario inválido');
