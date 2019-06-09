@@ -157,16 +157,13 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="genero" id="genero" value="1" checked="checked"></input>
-
+                                <input type="radio" name="genero" id="genero" value="0" checked="checked"></input>
                                 Masculino
                             </label>
                         </div>
-
                         <div class="radio">
                             <label>
-                                <input type="radio" name="genero" id="genero" value="2"></input>
-
+                                <input type="radio" name="genero" id="genero" value="1">
                                 Femenino
                             </label>
                         </div>
@@ -292,10 +289,10 @@
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <select class="form-control" name='estrato' id="estrato">
+                            <select class="form-control" name="estrato" id="estrato">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
-                                <option value="2">2</option>
+                                <option value="2">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
@@ -315,7 +312,7 @@
                             <select class="form-control" id="personashogar" name="personashogar">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
-                                <option value="2">2</option>
+                                <option value="2">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
@@ -338,7 +335,7 @@
                             <select class="form-control" id="personascargo" name="personascargo" value="">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
-                                <option value="2">2</option>
+                                <option value="2">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
@@ -364,7 +361,7 @@
                             <select class="form-control" id="personastrabajan" name="personastrabajan">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
-                                <option value="2">2</option>
+                                <option value="2">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
@@ -387,9 +384,9 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" id="regimenseguridadsocial" name="regimenseguridadsocial">
-                                <option value="1">Contributivo</option>
-                                <option value="2">Subsidiado</option>
-                                <option value="3">Ninguno</option>
+                                <option value="0">Contributivo</option>
+                                <option value="1">Subsidiado</option>
+                                <option value="2">Ninguno</option>
                             </select>
                         </div>
                     </div>
@@ -422,7 +419,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="cotizapension" id="cotizapension" value="1"
+                                <input type="radio" name="cotizapension" id="cotizapension" value="0"
                                     checked="checked"></input>
                                 Si
                             </label>
@@ -430,7 +427,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="cotizapension" id="cotizapension" value="2"></input>
+                                <input type="radio" name="cotizapension" id="cotizapension" value="1"></input>
 
                                 No
                             </label>
@@ -482,7 +479,7 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="fpension">
+                            <select class="form-control" name='fpension' id="fpension">
                                 <?php
                                     $consultapensiones = "SELECT * FROM fondopensiones";
                                     echo $consultapensiones;
@@ -499,11 +496,11 @@
 
                     <!-- tabla tbl_Niveleducativo campo id_niveleducativo -->
 
-                    <label class="control-label col-md-2" for="id_">Nivel Eduvativo :</label>
+                    <label class="control-label col-md-2" for="niveleducativo">Nivel Eduvativo :</label>
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="fpension">
+                            <select class="form-control" name='niveleducativo' id="niveleducativo">
                                 <?php
                                  $consultaniveles = "SELECT * FROM niveleseducativos";
                                  echo $consultaniveles;
@@ -522,7 +519,7 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="tiempoterminado">
+                            <select class="form-control" name='tiempoterminado' id="tiempoterminado">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -532,19 +529,18 @@
                                 <option value="7">7</option>
                                 <option value="8">8</option>
                                 <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
+                                <option value="10">10</option>                             
                             </select>
                         </div>
                     </div>
 
                     <!-- tabla tbl_Tituloobtenido campo id_titulo--buscar carreras unicartagena curn sinu -->
 
-                    <label class="control-label col-md-2" for="idtitulo">Titulo Obtenido :</label>
+                    <label class="control-label col-md-2" for="tituloobtenido">Titulo Obtenido :</label>
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="idtitulo">
+                            <select class="form-control" name='tituloobtenido' id="tituloobtenido">
                                 <?php
                                 $consultatitulos = "SELECT * FROM titulosobtenidos";
                                 echo $consultatitulos;
@@ -563,16 +559,11 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="ocupacion">
+                            <select class="form-control" name="ocupacion" id="ocupacion">
                                 <option value="mototaxista">Mototaxista</option>
-
-                                <!-- tabla tbl_Tituloobtenido campo id_titulo--buscar carreras unicartagena curn sinu -->
-
-                                <option value="1">Empleado</option>
-
-                                <option value="2">Desempleado</option>
-
-                                <option value="3">Independiente</option>
+                                <option value="empleado">Empleado</option>
+                                <option value="desempleado">Desempleado</option>
+                                <option value="independiente">Independiente</option>
                             </select>
                         </div>
                     </div>
@@ -581,89 +572,73 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="tiempoexperincia">
+                            <select class="form-control" name="tiempoexperiencia" id="tiempoexperiencia">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
-
                                 <option value="7">7</option>
-
                                 <option value="8">8</option>
-
                                 <option value="9">9</option>
-
                                 <option value="10">10</option>
-
                                 <option value="11">11</option>
-
                                 <option value="12">12</option>
-
                                 <option value="13">13</option>
-
                                 <option value="14">14</option>
-
                                 <option value="15">15</option>
-
                                 <option value="16">16</option>
-
                                 <option value="17">17</option>
-
                                 <option value="18">18</option>
-
                                 <option value="19">19</option>
-
                                 <option value="20">20</option>
                             </select>
                         </div>
                     </div>
 
-                    <label class="control-label col-md-2" for="vinculacion">Tipo Vinculacion:</label>
-
+                    <label class="control-label col-md-2" for="tipovinculacion">Tipo Vinculacion:</label>
                     <div class="col-md-2">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="vinculacion" id="vinculacion" value="1"
+                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="0"
                                     checked="checked"></input>
-
-                                Indefenido
+                                Contrato
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="1"></input>
+                                Independiente
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="vinculacion" id="vinculacion" value="2"></input>
-
-                                Termino
-                                fijo
-                            </label>
-                        </div>
-
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="vinculacion" id="vinculacion" value="3"></input>
-
+                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="1"></input>
                                 Obra labor
                             </label>
                         </div>
                     </div>
 
                     <!-- tabla tbl_Curso campo id_curso -->
-
                     <label class="control-label col-md-4" for="curso">
                         Que Cursos o capacitaciones ha recibido:
                     </label>
 
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="curso"
-                            placeholder="manipulacion de alimentos..."></input>
+                            <select class="form-control" name="curso" id="curso">
+                                <?php
+                                $consultacursos = "SELECT * FROM cursos";
+                                echo $consultacursos;
+                                $resultadocursos= $conn->ejecutarQuery($consultacursos);
+                                while($row=mysqli_fetch_array($resultadocursos))
+                                {?>
+                                <option value="<?php echo $row["id_curso"] ?> ">
+                                    <?php echo $row["nomb_curso"] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
                     </div>
 
                     <!-- tabla tbl_Entidades campo id_entidad -->
@@ -671,43 +646,71 @@
                     <label class="control-label col-md-4" for="entidad">Que Entidad lo ha capacitado:</label>
 
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="entidad" placeholder="sena"></input>
+                             <select class="form-control" name="entidad" id="entidad">
+                                <?php
+                                $consultaentidades = "SELECT * FROM entidades";
+                                echo $consultaentidades;
+                                $resultadoentidades= $conn->ejecutarQuery($consultaentidades);
+                                while($row=mysqli_fetch_array($resultadoentidades))
+                                {?>
+                                <option value="<?php echo $row["id_entidad"] ?> ">
+                                    <?php echo $row["nomb_entidad"] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
                     </div>
 
                     <!-- tabla tbl_Curso campo idcursorecibir -->
 
-                    <label class="control-label col-md-4" for="idcursorecibir">
-                        Que Cursos o capacitaciones le gustaria
+                    <label class="control-label col-md-4" for="cursoarecibir">
+                        Que cursos o capacitaciones le gustaria
                         recibir:
                     </label>
 
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="idcursorecibir"
-                            placeholder="Internet, Office"></input>
+                       <select class="form-control" name="cursoarecibir" id="cursoarecibir">
+                                <?php
+                                $consultacursos = "SELECT * FROM cursos";
+                                echo $consultacursos;
+                                $resultadocursos= $conn->ejecutarQuery($consultacursos);
+                                while($row=mysqli_fetch_array($resultadocursos))
+                                {?>
+                                <option value="<?php echo $row["id_curso"] ?> ">
+                                    <?php echo $row["nomb_curso"] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
                     </div>
 
                     <!-- tabla tbl_Entidades campo id_entidadcapacite -->
 
-                    <label class="control-label col-md-4" for="id_entidadcapacite">
-                        Que Cursos o capacitaciones ha
-                        recibido:
+                    <label class="control-label col-md-4" for="entidadcapacite">
+                        Que entidad le gustaria que lo capacite:
                     </label>
 
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="id_entidadcapacite"
-                            placeholder="cursos sena u otros"></input>
+                       <select class="form-control" name="entidadcapacite" id="entidadcapacite">
+                                <?php
+                                $consultaentidades = "SELECT * FROM entidades";
+                                echo $consultaentidades;
+                                $resultadoentidades= $conn->ejecutarQuery($consultaentidades);
+                                while($row=mysqli_fetch_array($resultadoentidades))
+                                {?>
+                                <option value="<?php echo $row["id_entidad"] ?> ">
+                                    <?php echo $row["nomb_entidad"] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
                     </div>
 
                     <label class="control-label col-md-2" for="tipovivienda">Tipo De Vivienda:</label>
 
                     <div class="col-md-2">
                         <!-- <input type="text" class="form-control" id="nombre" placeholder="Nombre"> -->
-
                         <div class="radio">
                             <label>
                                 <input type="radio" name="tipovivienda" id="tipovivienda" value="1"
                                     checked="checked"></input>
-
                                 Propia
                             </label>
                         </div>
@@ -715,7 +718,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="tipovivienda" id="tipovivienda" value="2"></input>
-
                                 Familiar
                             </label>
                         </div>
@@ -723,7 +725,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="tipovivienda" id="tipovivienda" value="3"></input>
-
                                 Arrendada
                             </label>
                         </div>
@@ -731,7 +732,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="tipovivienda" id="tipovivienda" value="4"></input>
-
                                 Otro
                             </label>
                         </div>
@@ -743,7 +743,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="acabados" id="acabados" value="1" checked="checked"></input>
-
                                 Acabada
                             </label>
                         </div>
@@ -751,7 +750,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="acabados" id="acabados" value="2"></input>
-
                                 Obra Gris
                             </label>
                         </div>
@@ -759,7 +757,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="acabados" id="acabados" value="3"></input>
-
                                 Obra Negra
                             </label>
                         </div>
@@ -767,7 +764,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="acabados" id="acabados" value="4"></input>
-
                                 Otro
                             </label>
                         </div>

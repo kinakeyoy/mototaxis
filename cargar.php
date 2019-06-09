@@ -18,19 +18,33 @@ $regimenseguridadsocialform=$_POST['regimenseguridadsocial'];
 $epsform=$_POST['eps'];
 $cotizapensionform=$_POST['cotizapension'];
 $tiempopensionform=$_POST['tiempopension'];
+$fpensionform=$_POST['fpension'];
+$niveleducativoform=$_POST['niveleducativo'];
+$tiempoterminadoform=$_POST['tiempoterminado'];
+$tituloobtenidoform=$_POST['tituloobtenido'];
+$ocupacionform=$_POST['ocupacion'];
+$tiempoexperienciaform=$_POST['tiempoexperiencia'];
+$tipovinculacionform=$_POST['tipovinculacion'];
+$cursoform=$_POST['curso'];
+$entidadform=$_POST['entidad'];
+$cursoarecibirform=$_POST['cursoarecibir'];
+$entidadcapaciteform=$_POST['entidadcapacite'];
+$tipoviviendaform=$_POST['tipovivienda'];
+$acabadosform=$_POST['acabados'];
+$financiacionviviendaform=$_POST['financiacionvivienda'];
+
 
 
 if ($conexion){
-	echo "<div display='none'>
+	echo "<div>
     <script type='text/javascript'>
         console.log('Conectado a base de datos desde cargar');
     </script>
 </div>";
 
 
-
 /* insertamos el registro para cada tabla */
-$inserciondatos="INSERT INTO personas (cedula,nombre,celular,genero,edad,estado_civil,id_municipio2,id_religion, id_barrio,estrato,personas_hogar,personas_cargo,personas_trabajan,seguridad_social,id_eps,cotiza_pension,tiempo_pension) VALUES ('$ccform', '$nombreform', '$celularform', '$generoform', '$edadform', '$estadocivilform','$lugarnacimientoform','$religionform','$barrioform','$estratoform','$personashogarform','$personascargoform','$personastrabajanform','$regimenseguridadsocialform','$epsform','$cotizapensionform','$tiempopensionform')";
+$inserciondatos="INSERT INTO personas (cedula,nombre,celular,genero,edad,estado_civil,id_municipio2,id_religion,id_barrio,estrato,personas_hogar,personas_cargo,personas_trabajan,seguridad_social,id_eps,cotiza_pension,tiempo_pension,id_fondo_pension,id_nivel_educativo,tiempo_terminado,id_titulo,ocupacion,tiempo_experiencia,vinculacion,id_curso,id_entidad,id_curso_recibir,id_entidad_capacite,id_tipo_vivienda,id_tipo_acabado,id_financiacion_vivienda) VALUES ('$ccform','$nombreform','$celularform','$generoform','$edadform','$estadocivilform','$lugarnacimientoform','$religionform','$barrioform','$estratoform','$personashogarform','$personascargoform','$personastrabajanform','$regimenseguridadsocialform','$epsform','$cotizapensionform','$tiempopensionform','$fpensionform','$niveleducativoform','$tiempoterminadoform','$tituloobtenidoform','$ocupacionform','$tiempoexperienciaform','$tipovinculacionform',$cursoform,$entidadform,$cursoarecibirform,$entidadcapaciteform,$tipoviviendaform,$acabadosform,$financiacionviviendaform)";
 		if(mysqli_query($conexion,$inserciondatos))
 		{
 			echo '<!DOCTYPE html>
@@ -43,7 +57,7 @@ $inserciondatos="INSERT INTO personas (cedula,nombre,celular,genero,edad,estado_
     				<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 				  </head>
 				  <body>
-					<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
 					<strong>Datos Agregados!</strong> 
 					<a href="sadmin.php">
 	  					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -55,7 +69,7 @@ $inserciondatos="INSERT INTO personas (cedula,nombre,celular,genero,edad,estado_
 				  </html>';
 			}			
 			else{
-					echo "No Inserto atos";
+					echo "No Inserto Datos";
                 }
 			 } else{
              echo "No se Conecto a base de datos desde cargar";
