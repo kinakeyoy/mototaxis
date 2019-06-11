@@ -533,7 +533,7 @@ include 'conexion.php';
                     <label class="control-label col-md-4" for="habitacionesvivienda">Numero de habitaciones De La Vivienda :</label>
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="habitacionesvivienda">
+                            <select class="form-control" name="habvivienda" id="habvivienda">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -547,14 +547,14 @@ include 'conexion.php';
                             </select>
                         </div>
                     </div>
-                    <label class="control-label col-md-2" for="servicospublicos">Servicios Publicos:</label>
+                    <label class="control-label col-md-2" for="serviciospublicos">Servicios Publicos:</label>
                     <div class="col-md-4">
                         <!--    <input type="text" class="form-control" id="nombre" placeholder="Nombre"> -->
                         <div class="checkbox">
-                            <label><input type="checkbox" name="servicospublicos" id="servicospublicos" value="1" checked> Agua</label>
+                            <label><input type="checkbox" name="serviciospublicos" id="serviciospublicos" value="1" checked> Agua</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" name="servicospublicos" id="servicospublicos" value="fa-rotate-270"> Alcantarillado</label>
+                            <label><input type="checkbox" name="serviciospublicos" id="servicospublicos" value="fa-rotate-270"> Alcantarillado</label>
                         </div>
                         <div class="checkbox">
                             <label><input type="checkbox" name="servicospublicos" id="servicospublicos" value="3"> Energia Electrica</label>

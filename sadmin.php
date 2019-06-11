@@ -333,6 +333,7 @@
                     <div class="col-md-1">
                         <div class="form-group">
                             <select class="form-control" id="personascargo" name="personascargo" value="">
+                                <option value="0">0</option>    
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="2">3</option>
@@ -359,6 +360,7 @@
                     <div class="col-md-1">
                         <div class="form-group">
                             <select class="form-control" id="personastrabajan" name="personastrabajan">
+                                <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="2">3</option>
@@ -439,6 +441,7 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" name='tiempopension' id="tiempopension">
+                                <option value="0">0</option>    
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -520,6 +523,7 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" name='tiempoterminado' id="tiempoterminado">
+                                <option value="0">0</option>    
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -573,6 +577,7 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" name="tiempoexperiencia" id="tiempoexperiencia">
+                                <option value="0">0</option>    
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -781,7 +786,6 @@
                             <label>
                                 <input type="radio" name="financiacionvivienda" id="financiacionvivienda" value="1"
                                     checked="checked"></input>
-
                                 Prestamo Bancario
                             </label>
                         </div>
@@ -789,7 +793,7 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="financiacionvivienda" id="financiacionvivienda"
-                                    value="2"></input>
+                                    value="2">
 
                                 Subsidio Del Estado
                             </label>
@@ -798,7 +802,7 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="financiacionvivienda" id="financiacionvivienda"
-                                    value="3"></input>
+                                    value="3">
 
                                 Recurso Propios
                             </label>
@@ -821,25 +825,16 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="habitacionesvivienda">
-                                <option value="1">1</option>
-
+                            <select class="form-control" name="habitacionesvivienda" id="habitacionesvivienda">
+                                <option selected="selected" value="1">1</option>
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
-
                                 <option value="6">6</option>
-
                                 <option value="7">7</option>
-
                                 <option value="8">8</option>
-
                                 <option value="9">9</option>
-
                                 <option value="10">10</option>
                             </select>
                         </div>
@@ -852,33 +847,29 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="servicospublicos" id="servicospublicos" value="1"
-                                    checked="checked"></input>
-
+                                <input type="checkbox" name="sp_1" id="sp_1" 
+                                    ></input>
                                 Agua
                             </label>
-                        </div>
+                        </div>             
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="servicospublicos" id="servicospublicos"
-                                    value="fa-rotate-270"></input>
-
+                                <input type="checkbox" name="sp_2" id="sp_2" value="1"></input>
                                 Alcantarillado
                             </label>
                         </div>
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="servicospublicos" id="servicospublicos" value="3"></input>
-
+                                <input type="checkbox" name="sp_3" id="sp_3" value="1"></input>
                                 Energia Electrica
                             </label>
                         </div>
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="servicospublicos" id="servicospublicos" value="4"></input>
+                                <input type="checkbox" name="sp_4" id="sp_4" value="1"></input>
 
                                 Tv
                                 Cable
@@ -887,16 +878,14 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="servicospublicos" id="servicospublicos" value="5"></input>
-
+                                <input type="checkbox" name="sp_5" id="sp_5" value="1"></input>
                                 Internet
                             </label>
                         </div>
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="servicospublicos" id="servicospublicos" value="6"></input>
-
+                                <input type="checkbox" name="sp_6" id="sp_6" value="1"></input>
                                 Telefono
                             </label>
                         </div>
@@ -912,15 +901,12 @@
                             <label>
                                 <input type="radio" name="actprincipalspub" id="actprincipalspub" value="1"
                                     checked="checked"></input>
-
                                 Si
                             </label>
                         </div>
-
                         <div class="radio">
                             <label>
-                                <input type="radio" name="actprincipalspub" id="actprincipalspub" value="2"></input>
-
+                                <input type="radio" name="actprincipalspub" id="actprincipalspub" value="0"></input>
                                 No
                             </label>
                         </div>
@@ -935,14 +921,13 @@
                             <label>
                                 <input type="radio" name="actprincipalspar" id="actprincipalspar" value="1"
                                     checked="checked"></input>
-
                                 Si
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="actprincipalspar" id="actprincipalspar" value="2"></input>
+                                <input type="radio" name="actprincipalspar" id="actprincipalspar" value="0"></input>
 
                                 No
                             </label>
@@ -956,65 +941,37 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="tiempoexpspub">
+                            <select class="form-control" name="tiempoexpspub" id="tiempoexpspub">
+                                <option value="0">0 Año</option>    
                                 <option value="1">1 Año</option>
-
                                 <option value="2">2 Años</option>
-
                                 <option value="3">3 Años</option>
-
                                 <option value="4">4 Años</option>
-
                                 <option value="5">5 Años</option>
-
                                 <option value="6">6 Años</option>
-
                                 <option value="7">7 Años</option>
-
                                 <option value="8">8 Años</option>
-
                                 <option value="9">9 Años</option>
-
                                 <option value="10">10 Años</option>
-
                                 <option value="11">11 Años</option>
-
                                 <option value="12">12 Años</option>
-
                                 <option value="13">13 Años</option>
-
                                 <option value="14">14 Años</option>
-
                                 <option value="15">15 Años</option>
-
                                 <option value="16">16 Años</option>
-
                                 <option value="17">17 Años</option>
-
                                 <option value="18">18 Años</option>
-
                                 <option value="19">19 Años</option>
-
                                 <option value="20">20 Años</option>
-
                                 <option value="21">21 Años</option>
-
                                 <option value="22">22 Años</option>
-
                                 <option value="23">23 Años</option>
-
                                 <option value="24">24 Años</option>
-
                                 <option value="25">25 Años</option>
-
                                 <option value="26">26 Años</option>
-
                                 <option value="27">27 Años</option>
-
                                 <option value="28">28 Años</option>
-
                                 <option value="29">29 Años</option>
-
                                 <option value="30">30 Años</option>
                             </select>
                         </div>
@@ -1027,66 +984,39 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="tiempoexpspar">
-                                <option value="1">1 Año</option>
-
-                                <option value="2">2 Años</option>
-
-                                <option value="3">3 Años</option>
-
-                                <option value="4">4 Años</option>
-
-                                <option value="5">5 Años</option>
-
-                                <option value="6">6 Años</option>
-
-                                <option value="7">7 Años</option>
-
-                                <option value="8">8 Años</option>
-
-                                <option value="9">9 Años</option>
-
-                                <option value="10">10 Años</option>
-
+                            <select class="form-control" name="tiempoexpspar" id="tiempoexpspar">
+                              <option value="0">0 Año</option>
+                              <option value="1">1 Año</option>
+                              <option value="2">2 Años</option>
+                              <option value="3">3 Años</option>
+                              <option value="4">4 Años</option>
+                              <option value="5">5 Años</option>
+                              <option value="6">6 Años</option>
+                              <option value="7">7 Años</option>
+                              <option value="8">8 Años</option>
+                              <option value="9">9 Años</option>
+                              <option value="10">10 Años</option>
                                 <option value="11">11 Años</option>
-
                                 <option value="12">12 Años</option>
-
                                 <option value="13">13 Años</option>
-
                                 <option value="14">14 Años</option>
-
                                 <option value="15">15 Años</option>
-
                                 <option value="16">16 Años</option>
-
                                 <option value="17">17 Años</option>
-
                                 <option value="18">18 Años</option>
-
                                 <option value="19">19 Años</option>
-
                                 <option value="20">20 Años</option>
-
                                 <option value="21">21 Años</option>
-
                                 <option value="22">22 Años</option>
-
                                 <option value="23">23 Años</option>
-
                                 <option value="24">24 Años</option>
-
                                 <option value="25">25 Años</option>
-
                                 <option value="26">26 Años</option>
-
                                 <option value="27">27 Años</option>
-
                                 <option value="28">28 Años</option>
-
                                 <option value="29">29 Años</option>
-
                                 <option value="30">30 Años</option>
+
                             </select>
                         </div>
                     </div>
@@ -1095,24 +1025,18 @@
                         Su actividad complementaria ha
                         sido como mototaxis:
                     </label>
-
                     <div class="col-md-2">
-                        <!-- <input type="text" class="form-control" id="nombre" placeholder="Nombre"> -->
-
                         <div class="radio">
                             <label>
                                 <input type="radio" name="actividadcomplementaria" id="actividadcomplementaria"
-                                    value="1" checked="checked"></input>
-
+                                    value="1" checked="checked">
                                 Si
                             </label>
                         </div>
-
                         <div class="radio">
                             <label>
                                 <input type="radio" name="actividadcomplementaria" id="actividadcomplementaria"
-                                    value="2"></input>
-
+                                    value="0">
                                 No
                             </label>
                         </div>
@@ -1122,45 +1046,27 @@
 
                     <div class="col-md-2">
                         <div class="form-group">
-                            <select class="form-control" id="tiempoexpcomplem">
+                            <select class="form-control" name="tiempoexpcomplem" id="tiempoexpcomplem">
+                                <option value="0">0 Año</option>    
                                 <option value="1">1 Año</option>
-
                                 <option value="2">2 Años</option>
-
                                 <option value="3">3 Años</option>
-
                                 <option value="4">4 Años</option>
-
                                 <option value="5">5 Años</option>
-
                                 <option value="6">6 Años</option>
-
                                 <option value="7">7 Años</option>
-
                                 <option value="8">8 Años</option>
-
                                 <option value="9">9 Años</option>
-
                                 <option value="10">10 Años</option>
-
                                 <option value="11">11 Años</option>
-
                                 <option value="12">12 Años</option>
-
                                 <option value="13">13 Años</option>
-
                                 <option value="14">14 Años</option>
-
                                 <option value="15">15 Años</option>
-
                                 <option value="16">16 Años</option>
-
                                 <option value="17">17 Años</option>
-
                                 <option value="18">18 Años</option>
-
                                 <option value="19">19 Años</option>
-
                                 <option value="20">20 Años</option>
                             </select>
                         </div>
@@ -1170,68 +1076,51 @@
                         Como conductor pertenece a algun
                         tipo de organizacion:
                     </label>
-
-                    <div class="col-md-6">
-                        <!-- <input type="text" class="form-control" id="nombre" placeholder="Nombre"> -->
-
+                    <div class="col-md-2">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="perteneceorganizacion" id="perteneceorganizacion" value="1"
-                                    checked="checked"></input>
-
-                                Si
+                                <input type="radio"  name="perteneceorganizacion" id="perteneceorganizacion" value="1"
+                                    checked="checked">
+                                                          Si
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="perteneceorganizacion" id="perteneceorganizacion"
-                                    value="2"></input>
-
+                                <input type="radio"  name="perteneceorganizacion" id="perteneceorganizacion"
+                                    value="0">
                                 No
                             </label>
                         </div>
+                      </div>
+                             <div class="col-md-4">                          
+                                <input type="text" class="form-control" name="cualorganizacion" id="cualorganizacion"
+                                    placeholder="Ninguna o Nombre organizacion">                           
+                            </div>
+                        
+                   
 
-                        <div>
-                            <label>
-                                <input type="text" name="perteneceorganizacion" id="perteneceorganizacion"
-                                    placeholder="Cual organizacion"></input>
-                            </label>
-                        </div>
-                    </div>
+                    <label class="control-label col-md-3" for="caracterizado">Lo han caracterizado:</label>
 
-                    <label class="control-label col-md-4" for="caracterizado">lo han caracterizado:</label>
-
-                    <div class="col-md-2">
-                        <!-- <input type="text" class="form-control" id="nombre" placeholder="Nombre"> -->
-
+                    <div class="col-md-3">
                         <div class="radio">
                             <label>
                                 <input type="radio" name="caracterizado" id="caracterizado" value="1"
-                                    checked="checked"></input>
-
+                                    checked="checked">
                                 Si
                             </label>
                         </div>
-
                         <div class="radio">
                             <label>
-                                <input type="radio" name="caracterizado" id="caracterizado" value="2"></input>
-
+                                <input type="radio" name="caracterizado" id="caracterizado" value="0">
                                 No
                             </label>
                         </div>
                     </div>
-
-                    <label class="control-label col-md-3" for="entidadcaracterizo">Que entidad lo caracterizo:</label>
-
-                    <div class="col-md-3">
-                        <div class="text">
-                            <label>
-                                <input type="text" name="entidadcaracterizo" id="entidadcaracterizo"></input>
-                            </label>
-                        </div>
-                    </div>
+                    <div class="col-md-6">
+                    <label class="control-label " for="entidadcaracterizo">Que entidad lo caracterizo:</label>
+                    <input type="text" class="form-control " name="entidadcaracterizo" id="entidadcaracterizo" placeholder="Ninguna o Nombre Entidad">                                              
+                    </div>  
 
                     <label class="control-label col-md-6" for="evalresponsabilidad">
                         Evalue de 1 a 5 sus habilidades
@@ -1239,34 +1128,23 @@
                     </label>
 
                     <div class="col-md-6">
-                        <label class="control-label">
-                            Responsabilidad
-
-                            <select class="form-control" for="evalresponsabilidad">
+                        <label class="control-label">Responsabilidad
+                            <select class="form-control" name="evalresponsabilidad" id="evalresponsabilidad" for="evalresponsabilidad">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
                             </select>
                         </label>
 
-                        <label class="control-label" for="evalautoestima">
-                            Autoestima
+                        <label class="control-label" for="evalautoestima">Autoestima
 
-                            <select class="form-control">
+                            <select class="form-control" name="evalautoestima" id="evalautoestima">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
                             </select>
                         </label>
@@ -1274,15 +1152,11 @@
                         <label class="control-label" for="evalsociabilidad">
                             Sociabilidad
 
-                            <select class="form-control">
+                            <select class="form-control" name="evalsociabilidad" id="evalsociabilidad">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
                             </select>
                         </label>
@@ -1290,15 +1164,11 @@
                         <label class="control-label" for="evalintegridad">
                             Integridad
 
-                            <select class="form-control">
+                            <select class="form-control" name="evalintegridad" id="evalintegridad">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
                             </select>
                         </label>
@@ -1306,15 +1176,11 @@
                         <label class="control-label" for="evalamabilidad">
                             Amabilidad
 
-                            <select class="form-control">
+                            <select class="form-control" name="evalamabilidad" id="evalamabilidad">
                                 <option value="1">1</option>
-
                                 <option value="2">2</option>
-
                                 <option value="3">3</option>
-
                                 <option value="4">4</option>
-
                                 <option value="5">5</option>
                             </select>
                         </label>
