@@ -1594,10 +1594,8 @@
 
                     <div class="col-md-6">
                         <div class="text">
-                            <!-- <input type="text" class="form-control" name="dependenciaeconomica" id="dependenciaeconomica"> -->
-
                             <textarea class="form-control" name="dependenciaeconomica"
-                                id="dependenciaeconomica">Enter text here...</textarea>
+                                id="dependenciaeconomica">Numero de hijos o personas que depende de usted</textarea>
                         </div>
                     </div>
 
@@ -1611,7 +1609,7 @@
                             <!-- <input type="text" class="form-control" name="tiempomototaxismo" id="tiempomototaxismo"> -->
 
                             <textarea class="form-control" name="tiempomototaxismo"
-                                id="tiempomototaxismo">Enter text here...</textarea>
+                                id="tiempomototaxismo">Tiempo en años</textarea>
                         </div>
                     </div>
 
@@ -1619,38 +1617,33 @@
                         Considera usted que el mototaxismo es una actividad rentable para la economia de su hogar:
                         (Explique)
                     </label>
-
                     <div class="col-md-2">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="actividadrentable" id="actividadrentable" value="si"
-                                    checked="checked"></input>
-
+                                <input type="radio" name="actividadrentable" id="actividadrentable" value="1"
+                                    checked="checked">
                                 Si
                             </label>
                         </div>
-
                         <div class="radio">
                             <label></label>
-
-                            <input type="radio" name="actividadrentable" id="actividadrentable" value="no"></input>
-
+                            <input type="radio" name="actividadrentable" id="actividadrentable" value="0">
                             No
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="text">
-                            <!-- <input type="textarea" class="form-control" name="tiempomototaxismo" id="tiempomototaxismo"> -->
-
-                            <textarea class="form-control" name="tiempomototaxismo"
-                                id="tiempomototaxismo">Enter text here...</textarea>
+                            <textarea class="form-control" name="justificacion" 
+                                id="justificacion"></textarea>
                         </div>
                     </div>
 
-                    <label class="control-label col-md-4" for="actividadrentable">Fecha de Diligenciamiento</label>
+                    <label class="control-
+                    label col-md-4" for="actividadrentable"></label>
 
-                    <input class="form-control col-md-4" type="date" name="fechadiligenciamiento"></input>
+                    <input class="form-control col-md-4" type="date" id="fechadiligenciamiento"
+                     name="fechadiligenciamiento">
                 </div>
             </div>
              <div class="container">

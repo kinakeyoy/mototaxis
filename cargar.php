@@ -96,12 +96,11 @@ $exprecreacionistaform=$_POST['exprecreacionista'];
 $expsuministroalimform=$_POST['expsuministroalim'];
 $ingresopromedioform=$_POST['ingresopromedio'];
 $gastospromedioform=$_POST['gastospromedio'];
-
-
-
-
-
-
+$dependenciaeconomicaform=$_POST['dependenciaeconomica'];
+$tiempomototaxismoform=$_POST['tiempomototaxismo'];
+$actividadrentableform=$_POST['actividadrentable'];
+$justificacionform=$_POST['justificacion'];
+$fechadiligenciamientoform=$_POST['fechadiligenciamiento'];
 
 
 if ($conexion){
@@ -184,7 +183,12 @@ $inserciondatos="INSERT INTO personas
  exp_recreacionista,
  exp_suministro_alim,
  ingreso_promedio,
- gasto_promedio
+ gasto_promedio,
+ dependencia_economica,
+ tiempo_mototaxismo,
+ actividad_rentable,
+ actividad_rentable_razones,
+ fecha_diligenciamiento
  ) 
  VALUES
   ('$ccform',
@@ -257,7 +261,12 @@ $inserciondatos="INSERT INTO personas
 	'$exprecreacionistaform',
 	'$expsuministroalimform',
 	'$ingresopromedioform',
-	'$gastospromedioform')";
+	'$gastospromedioform',
+	'$dependenciaeconomicaform',
+	'$dependenciaeconomicaform',
+	'$actividadrentableform',
+	'$justificacionform',
+	'$fechadiligenciamientoform')";
 		if(mysqli_query($conexion,$inserciondatos))
 		{
 			echo '<!DOCTYPE html>
