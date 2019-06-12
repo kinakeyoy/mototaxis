@@ -1187,48 +1187,27 @@
                     </div>
                 </div>
             </fieldset>
-
+            <!-- Segunda Parte, nucleo familiar -->
             <fieldset>
                 <legend>2. Nucleo Familiar</legend>
-
                 <div class="form-group">
                     <div class="input-group">
                         <label class="control-label col-md-3" for="ingresosfamiliar">
                             Ingresos mensuales generados por el
                             grupo familiar:
                         </label>
-
                         <div class="col-md-3">
-                            <select class="form-control" id="imensuales">
-                                <option value="1">0 - 414.058 (0.5 Smlv)</option>
-
-                                <option value="2">414.058 - 828.116 (1 Smlv)</option>
-
-                                <option value="3">828.116 - 1.242.174(1.5 Smlv)</option>
-
-                                <option value="4">
-                                    1.242.174 - 1.656.232(2 Smlv))
-                                </option>
-                            </select>
+                          <input type="number" class="form-control" id="ingresosfamiliar" name="ingresosfamiliar" placeholder="250000"
+                                required="required">
                         </div>
-
                         <label class="control-label col-md-3" for="otrosingresosfamiliar">
                             Otros Ingresos que recibe el
                             nucleo familiar:
                         </label>
-
                         <div class="col-md-3">
-                            <select class="form-control" id="imensuales">
-                                <option value="1">0 - 414.058 (0.5 Smlv)</option>
-
-                                <option value="2">414.058 - 828.116 (1 Smlv)</option>
-
-                                <option value="3">828.116 - 1.242.174(1.5 Smlv)</option>
-
-                                <option value="3">
-                                    1.242.174 - 1.656.232(2 Smlv))
-                                </option>
-                            </select>
+                        <input type="number" class="form-control" 
+                        id="otrosingresosfamiliar" name="otrosingresosfamiliar" placeholder="250000"
+                        required="required">
                         </div>
                     </div>
                 </div>
@@ -1239,19 +1218,10 @@
                             Gastos mensuales del grupo
                             familiar:
                         </label>
-
                         <div class="col-md-3">
-                            <select class="form-control" id="gmensuales">
-                                <option value="1">0 - 414.058 (0.5 Smlv)</option>
-
-                                <option value="2">414.058 - 828.116 (1 Smlv)</option>
-
-                                <option value="3">828.116 - 1.242.174(1.5 Smlv)</option>
-
-                                <option value="4">
-                                    1.242.174 - 1.656.232(2 Smlv))
-                                </option>
-                            </select>
+                           <input type="number" class="form-control" 
+                                  id="gastosfamilia" name="gastosfamilia" placeholder="250000"
+                                  required="required">
                         </div>
 
                         <label class="control-label col-md-3" for="tahorro">
@@ -1260,23 +1230,11 @@
                         </label>
 
                         <div class="col-md-3">
-                            <!-- <input type="text" class="form-control" id="nombre" placeholder="Nombre"> -->
-
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="tahorro" id="torganizacion" value="1"
-                                        checked="checked"></input>
-
-                                    Si
-                                </label>
+                            <div class="radio">                              
+                                    <input type="radio" name="tahorro" id="tahorro" value="1">Si
                             </div>
-
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="tahorro" id="torganizacion" value="2"></input>
-
-                                    No
-                                </label>
+                            <div class="radio">                               
+                                    <input type="radio" name="tahorro" id="tahorro" value="0" checked="checked">No                                
                             </div>
                         </div>
                     </div>

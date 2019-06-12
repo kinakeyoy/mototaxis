@@ -78,11 +78,10 @@ $evalautoestimaform=$_POST['evalautoestima'];
 $evalsociabilidadform=$_POST['evalsociabilidad'];
 $evalintegridadform=$_POST['evalintegridad'];
 $evalamabilidadform=$_POST['evalamabilidad'];
-
-
-
-
-
+$ingresosfamiliarform=$_POST['ingresosfamiliar'];
+$otrosingresosfamiliarform=$_POST['otrosingresosfamiliar'];
+$gastosfamiliaform=$_POST['gastosfamilia'];
+$tahorroform=$_POST['tahorro'];
 
 
 
@@ -148,7 +147,11 @@ $inserciondatos="INSERT INTO personas
  eval_autoestima,
  eval_socialibidad,
  eval_integridad,
- eval_amabilidad
+ eval_amabilidad,
+ ingresos_familiar,
+ otros_ingresos_familiar,
+ gastos_familiar,
+ ahorro_familiar
  ) 
  VALUES
   ('$ccform',
@@ -203,7 +206,11 @@ $inserciondatos="INSERT INTO personas
 	'$evalautoestimaform',
 	'$evalsociabilidadform',
 	'$evalintegridadform',
-	'$evalamabilidadform')";
+	'$evalamabilidadform',
+	'$ingresosfamiliarform',
+	'$otrosingresosfamiliarform',
+	'$gastosfamiliaform',
+	'$tahorroform')";
 		if(mysqli_query($conexion,$inserciondatos))
 		{
 			echo '<!DOCTYPE html>
