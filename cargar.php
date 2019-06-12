@@ -82,6 +82,25 @@ $ingresosfamiliarform=$_POST['ingresosfamiliar'];
 $otrosingresosfamiliarform=$_POST['otrosingresosfamiliar'];
 $gastosfamiliaform=$_POST['gastosfamilia'];
 $tahorroform=$_POST['tahorro'];
+$licenciaconduccionform=$_POST['licenciaconduccion'];
+$tarjetadepropiedadform=$_POST['tarjetadepropiedad'];
+$soatform=$_POST['soat'];
+$tecnicomecanicaform=$_POST['tecnicomecanica'];
+$matriculadoform=$_POST['matriculado'];
+$cargoadtivoform=$_POST['cargoadtivo'];
+$expserviciomecanicaform=$_POST['expserviciomecanica'];
+$expserviciomontallantasform=$_POST['expserviciomontallantas'];
+$explavadorcarroform=$_POST['explavadorcarro'];
+$expvendedordulceform=$_POST['expvendedordulce'];
+$exprecreacionistaform=$_POST['exprecreacionista'];
+$expsuministroalimform=$_POST['expsuministroalim'];
+$ingresopromedioform=$_POST['ingresopromedio'];
+$gastospromedioform=$_POST['gastospromedio'];
+
+
+
+
+
 
 
 
@@ -151,7 +170,21 @@ $inserciondatos="INSERT INTO personas
  ingresos_familiar,
  otros_ingresos_familiar,
  gastos_familiar,
- ahorro_familiar
+ ahorro_familiar,
+ licencia_conduccion,
+ tarjeta_propiedad,
+ soat,
+ tecnico_mecanica,
+ matriculado,
+ id_cargo,
+ exp_servicio_mecanica,
+ exp_servicio_montallantas,
+ exp_lavador_carro,
+ exp_vendedor_dulces,
+ exp_recreacionista,
+ exp_suministro_alim,
+ ingreso_promedio,
+ gasto_promedio
  ) 
  VALUES
   ('$ccform',
@@ -210,7 +243,21 @@ $inserciondatos="INSERT INTO personas
 	'$ingresosfamiliarform',
 	'$otrosingresosfamiliarform',
 	'$gastosfamiliaform',
-	'$tahorroform')";
+	'$tahorroform',
+	'$licenciaconduccionform',
+	'$tarjetadepropiedadform',
+	'$soatform',
+	'$tecnicomecanicaform',
+	'$matriculadoform',
+	'$cargoadtivoform',
+	'$expserviciomecanicaform',
+	'$expserviciomontallantasform',
+	'$explavadorcarroform',
+	'$expvendedordulceform',
+	'$exprecreacionistaform',
+	'$expsuministroalimform',
+	'$ingresopromedioform',
+	'$gastospromedioform')";
 		if(mysqli_query($conexion,$inserciondatos))
 		{
 			echo '<!DOCTYPE html>

@@ -607,13 +607,13 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="tipovinculacion" id="tipovinculacion" value="0"
-                                    checked="checked"></input>
+                                    checked="checked">
                                 Contrato
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="1"></input>
+                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="1">
                                 Independiente
                             </label>
                         </div>
@@ -847,8 +847,7 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="sp_1" id="sp_1" 
-                                    ></input>
+                                <input type="checkbox" name="sp_1" id="sp_1">
                                 Agua
                             </label>
                         </div>             
@@ -1254,22 +1253,18 @@
                             Cuenta con licencia de
                             conduccion:
                         </label>
-
                         <div class="col-md-2">
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="licenciaconduccion" id="licenciaconduccion" value="1"
-                                        checked="checked"></input>
-
+                                        checked="checked">
                                     Si
                                 </label>
                             </div>
-
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="licenciaconduccion" id="licenciaconduccion"
-                                        value="2"></input>
-
+                                        value="0">
                                     No
                                 </label>
                             </div>
@@ -1284,8 +1279,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="tarjetadepropiedad" id="tarjetadepropiedad" value="1"
-                                        checked="checked"></input>
-
+                                        checked="checked">
                                     Si
                                 </label>
                             </div>
@@ -1293,8 +1287,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="tarjetadepropiedad" id="tarjetadepropiedad"
-                                        value="2"></input>
-
+                                        value="0">
                                     No
                                 </label>
                             </div>
@@ -1304,20 +1297,16 @@
                             Cuenta usted con con el seguro obligatorio de
                             automovil SOAT:
                         </label>
-
                         <div class="col-md-2">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="soat" id="soat" value="1" checked="checked"></input>
-
+                                    <input type="radio" name="soat" id="soat" value="1" checked="checked">
                                     Si
                                 </label>
                             </div>
-
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="soat" id="soat" value="2"></input>
-
+                                    <input type="radio" name="soat" id="soat" value="0">
                                     No
                                 </label>
                             </div>
@@ -1331,412 +1320,253 @@
                         <div class="col-md-2">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="tecnicomecanica" id="tecnicomecanica" value="si"
-                                        checked="checked"></input>
-
+                                    <input type="radio" name="tecnicomecanica" id="tecnicomecanica" value="1"
+                                        checked="checked">
                                     Si
                                 </label>
                             </div>
-
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="tecnicomecanica" id="tecnicomecanica" value="no"></input>
-
+                                    <input type="radio" name="tecnicomecanica" id="tecnicomecanica" value="0">
                                     No
                                 </label>
                             </div>
                         </div>
-
                         <label class="control-label col-md-4" for="matriculado">
                             Su vehiculo se encuentra matriculado en
                             la entidad pertinente :
                         </label>
-
                         <div class="col-md-8">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="matriculado" id="matriculado" value="si"
-                                        checked="checked"></input>
-
+                                    <input type="radio" name="matriculado" id="matriculado" value="1"
+                                        checked="checked">
                                     Si
                                 </label>
                             </div>
-
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="matriculado" id="matriculado" value="no"></input>
-
+                                    <input type="radio" name="matriculado" id="matriculado" value="0">
                                     No
                                 </label>
                             </div>
                         </div>
 
-                        <label class="control-label col-md-4" for="cargo">Cargos Administrativos:</label>
-
+                        <label class="control-label col-md-4" for="cargoadtivo">Cargos Administrativos:</label>
+                        <!-- cargar tablas de cargo -->
                         <div class="col-md-8">
-                            <label>
-                                <input type="radio" class="form-control" name="cargo" id="cargo"
-                                    value="tecnico"></input>
-
-                                Tecnico
-                            </label>
-
-                            <label>
-                                <input type="radio" class="form-control" name="cargo" id="cargo"
-                                    value="tecnologo"></input>
-
-                                Tecnologo
-                            </label>
-
-                            <label>
-                                <input type="radio" class="form-control" name="cargo" id="cargo"
-                                    value="profesional"></input>
-
-                                Profesional
-                            </label>
-
-                            <label>
-                                <input type="radio" class="form-control" name="cargo" id="cargo"
-                                    value="auxiliar"></input>
-
-                                Auxiliar
-                            </label>
-
-                            <label>
-                                <input type="radio" class="form-control" name="cargo" id="cargo"
-                                    value="secretaria"></input>
-
-                                Secretaria
-                            </label>
-
-                            <label>
-                                <input type="radio" class="form-control" name="cargo" id="cargo" value="otro"></input>
-
-                                Otro
-                            </label>
-
-                            <label>
-                                <input type="text" name="otrocargo" id="otrocargo"></input>
-                            </label>
+                        <select class="form-control" name="cargoadtivo" id="cargoadtivo">
+                                <?php
+                                $consultacargos = "SELECT * FROM cargos";
+                                echo $consultacargos;
+                                $resultadocargos= $conn->ejecutarQuery($consultacargos);
+                                while($row=mysqli_fetch_array($resultadocargos))
+                                {?>
+                                <option value="<?php echo $row["id_cargo"] ?> ">
+                                    <?php echo $row["nomb_cargo"] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                            
+                           
                         </div>
 
                         <h6 class="col-md-12">Tipo actividad productiva</h6>
 
-                        <label class="control-label col-md-2" for="expServiciomecanica">
+                        <label class="control-label col-md-2" for="expserviciomecanica">
                             Servicio mecanica
                             automotriz:
                         </label>
 
                         <div class="col-md-4">
                             <label>
-                                <select class="form-control" id="id"
-                                    expServiciomecanicaExpServiciomontallantas="expServiciomecanicaExpServiciomontallantas">
-                                    <option value="1">
-                                        1
-                                        Año
-                                    </option>
-
+                                <select class="form-control" id="expserviciomecanica"
+                                    name="expserviciomecanica">
+                                    <option value="0">0 Año </option>
+                                    <option value="1">1 Año </option>
                                     <option value="2">2 Años</option>
-
                                     <option value="3">3 Años</option>
-
                                     <option value="4">4 Años</option>
-
                                     <option value="5">5 Años</option>
-
                                     <option value="6">6 Años</option>
-
                                     <option value="7">7 Años</option>
-
                                     <option value="8">8 Años</option>
-
                                     <option value="9">9 Años</option>
-
                                     <option value="10">10 Años</option>
-
                                     <option value="11">11 Años</option>
-
                                     <option value="12">12 Años</option>
-
                                     <option value="13">13 Años</option>
-
                                     <option value="14">14 Años</option>
-
                                     <option value="15">15 Años</option>
-
                                     <option value="16">16 Años</option>
-
                                     <option value="17">17 Años</option>
-
                                     <option value="18">18 Años</option>
-
                                     <option value="19">19 Años</option>
-
                                     <option value="20">20 Años</option>
                                 </select>
                             </label>
                         </div>
 
-                        <label class="control-label col-md-2" for="ExpServiciomontallantas">
+                        <label class="control-label col-md-2" for="expserviciomontallantas">
                             Servicio de
                             montallantas:
                         </label>
 
                         <div class="col-md-4">
                             <label>
-                                <select class="form-control" id="ExpServiciomontallantas">
+                                <select class="form-control" name="expserviciomontallantas" id="expserviciomontallantas">
+                                    <option value="0">0 Año</option>
                                     <option value="1">1 Año</option>
-
                                     <option value="2">2 Años</option>
-
                                     <option value="3">3 Años</option>
-
                                     <option value="4">4 Años</option>
-
                                     <option value="5">5 Años</option>
-
                                     <option value="6">6 Años</option>
-
                                     <option value="7">7 Años</option>
-
                                     <option value="8">8 Años</option>
-
                                     <option value="9">9 Años</option>
-
                                     <option value="10">10 Años</option>
-
                                     <option value="11">11 Años</option>
-
                                     <option value="12">12 Años</option>
-
                                     <option value="13">13 Años</option>
-
                                     <option value="14">14 Años</option>
-
                                     <option value="15">15 Años</option>
-
                                     <option value="16">16 Años</option>
-
                                     <option value="17">17 Años</option>
-
                                     <option value="18">18 Años</option>
-
                                     <option value="19">19 Años</option>
-
                                     <option value="20">20 Años</option>
                                 </select>
                             </label>
                         </div>
 
-                        <label class="control-label col-md-2" for="ExpLavadorcarro">Lavador de Carro:</label>
+                        <label class="control-label col-md-2" for="explavadorcarro">Lavador de Carro:</label>
 
                         <div class="col-md-4">
                             <label>
-                                <select class="form-control" id="ExpLavadorcarro">
+                                <select class="form-control" name="explavadorcarro" id="explavadorcarro">
+                                    <option value="0">0 Año</option>
                                     <option value="1">1 Año</option>
-
                                     <option value="2">2 Años</option>
-
                                     <option value="3">3 Años</option>
-
                                     <option value="4">4 Años</option>
-
                                     <option value="5">5 Años</option>
-
                                     <option value="6">6 Años</option>
-
                                     <option value="7">7 Años</option>
-
                                     <option value="8">8 Años</option>
-
                                     <option value="9">9 Años</option>
-
                                     <option value="10">10 Años</option>
-
                                     <option value="11">11 Años</option>
-
                                     <option value="12">12 Años</option>
-
                                     <option value="13">13 Años</option>
-
                                     <option value="14">14 Años</option>
-
                                     <option value="15">15 Años</option>
-
                                     <option value="16">16 Años</option>
-
                                     <option value="17">17 Años</option>
-
                                     <option value="18">18 Años</option>
-
                                     <option value="19">19 Años</option>
-
                                     <option value="20">20 Años</option>
                                 </select>
                             </label>
                         </div>
 
-                        <label class="control-label col-md-2" for="ExpVendedordulcevdulce">Vendedor de dulce:</label>
+                        <label class="control-label col-md-2" for="expvendedordulce">Vendedor de dulce:</label>
 
                         <div class="col-md-4">
                             <label>
-                                <select class="form-control" id="ExpVendedordulcevdulce">
+                                <select class="form-control" name="expvendedordulce" id="expvendedordulce">
+                                    <option value="0">0 Año</option>
                                     <option value="1">1 Año</option>
-
                                     <option value="2">2 Años</option>
-
                                     <option value="3">3 Años</option>
-
                                     <option value="4">4 Años</option>
-
                                     <option value="5">5 Años</option>
-
                                     <option value="6">6 Años</option>
-
                                     <option value="7">7 Años</option>
-
                                     <option value="8">8 Años</option>
-
                                     <option value="9">9 Años</option>
-
                                     <option value="10">10 Años</option>
-
                                     <option value="11">11 Años</option>
-
                                     <option value="12">12 Años</option>
-
                                     <option value="13">13 Años</option>
-
                                     <option value="14">14 Años</option>
-
                                     <option value="15">15 Años</option>
-
                                     <option value="16">16 Años</option>
-
                                     <option value="17">17 Años</option>
-
                                     <option value="18">18 Años</option>
-
                                     <option value="19">19 Años</option>
-
                                     <option value="20">20 Años</option>
                                 </select>
                             </label>
                         </div>
 
-                        <label class="control-label col-md-2" for="ExpRecreacionista">Recreacionista:</label>
+                        <label class="control-label col-md-2" for="exprecreacionista">Recreacionista:</label>
 
                         <div class="col-md-4">
                             <label>
-                                <select class="form-control" id="ExpRecreacionista">
+                                <select class="form-control" name="exprecreacionista" id="exprecreacionista">
+                                    <option value="0">0 Año</option>
                                     <option value="1">1 Año</option>
-
                                     <option value="2">2 Años</option>
-
                                     <option value="3">3 Años</option>
-
                                     <option value="4">4 Años</option>
-
                                     <option value="5">5 Años</option>
-
                                     <option value="6">6 Años</option>
-
                                     <option value="7">7 Años</option>
-
                                     <option value="8">8 Años</option>
-
                                     <option value="9">9 Años</option>
-
                                     <option value="10">10 Años</option>
-
                                     <option value="11">11 Años</option>
-
                                     <option value="12">12 Años</option>
-
                                     <option value="13">13 Años</option>
-
                                     <option value="14">14 Años</option>
-
                                     <option value="15">15 Años</option>
-
                                     <option value="16">16 Años</option>
-
                                     <option value="17">17 Años</option>
-
                                     <option value="18">18 Años</option>
-
                                     <option value="19">19 Años</option>
-
                                     <option value="20">20 Años</option>
                                 </select>
                             </label>
                         </div>
 
-                        <label class="control-label col-md-2" for="ExpSuministroAlim">Suministro de alimentos:</label>
+                        <label class="control-label col-md-2" for="expsuministroalim">Suministro de alimentos:</label>
 
                         <div class="col-md-2">
-                            <select class="form-control" id="ExpSuministroAlim">
-                                ExpSuministroAlim
-
+                            <select class="form-control" name="expsuministroalim" id="expsuministroalim">                                
+                                <option value="0">0 Año</option>
                                 <option value="1">1 Año</option>
-
                                 <option value="2">2 Años</option>
-
                                 <option value="3">3 Años</option>
-
                                 <option value="4">4 Años</option>
-
                                 <option value="5">5 Años</option>
-
                                 <option value="6">6 Años</option>
-
                                 <option value="7">7 Años</option>
-
                                 <option value="8">8 Años</option>
-
                                 <option value="9">9 Años</option>
-
                                 <option value="10">10 Años</option>
-
                                 <option value="11">11 Años</option>
-
                                 <option value="12">12 Años</option>
-
                                 <option value="13">13 Años</option>
-
                                 <option value="14">14 Años</option>
-
                                 <option value="15">15 Años</option>
-
                                 <option value="16">16 Años</option>
-
                                 <option value="17">17 Años</option>
-
                                 <option value="18">18 Años</option>
-
                                 <option value="19">19 Años</option>
-
                                 <option value="20">20 Años</option>
                             </select>
                         </div>
 
-                        <label class="control-label col-md-3" for="Ingresopromedio">
+                        <label class="control-label col-md-3" for="ingresopromedio">
                             Cual es su ingreso promedio del
                             mes:
                         </label>
 
                         <div class="col-md-3">
-                            <select class="form-control" id="Ingresopromedio">
-                                <option value="1">0 - 414.058 (0.5 Smlv)</option>
-
-                                <option value="2">414.058 - 828.116 (1 Smlv)</option>
-
-                                <option value="3">828.116 - 1.242.174(1.5 Smlv)</option>
-
-                                <option value="3">
-                                    1.242.174 - 1.656.232(2 Smlv))
-                                </option>
-                            </select>
+                          <input type="number" class="form-control" 
+                                  id="ingresopromedio" name="ingresopromedio" placeholder="500000"
+                                  required="required">
                         </div>
 
                         <label class="control-label col-md-3" for="gastopromedio">
@@ -1745,17 +1575,9 @@
                         </label>
 
                         <div class="col-md-3">
-                            <select class="form-control" id="gastopromedio">
-                                <option value="1">0 - 414.058 (0.5 Smlv)</option>
-
-                                <option value="2">414.058 - 828.116 (1 Smlv)</option>
-
-                                <option value="3">828.116 - 1.242.174(1.5 Smlv)</option>
-
-                                <option value="3">
-                                    1.242.174 - 1.656.232(2 Smlv))
-                                </option>
-                            </select>
+                             <input type="number" class="form-control" 
+                                  id="gastospromedio" name="gastospromedio" placeholder="300000"
+                                  required="required">
                         </div>
                     </div>
                 </div>
