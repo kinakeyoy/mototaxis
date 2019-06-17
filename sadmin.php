@@ -157,13 +157,13 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="genero" id="genero" value="0" checked="checked"></input>
+                                <input type="radio" name="genero" id="genero" value="Masculino" checked="checked"></input>
                                 Masculino
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="genero" id="genero" value="1">
+                                <input type="radio" name="genero" id="genero" value="Femenino">
                                 Femenino
                             </label>
                         </div>
@@ -180,16 +180,15 @@
                     <div class="col-md-2">
                         <div class="radio">
                             <label>
-                                <input type="radio" id="estadocivil" name="estadocivil" value="1"
+                                <input type="radio" id="estadocivil" name="estadocivil" value="Casado"
                                     checked="checked"></input>
-
                                 Casado
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input type="radio" id="estadocivil" name="estadocivil" value="2"></input>
+                                <input type="radio" id="estadocivil" name="estadocivil" value="Union Libre"></input>
 
                                 Union
                                 Libre
@@ -198,7 +197,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" id="estadocivil" name="estadocivil" value="3"></input>
+                                <input type="radio" id="estadocivil" name="estadocivil" value="Separado"></input>
 
                                 Separado
                             </label>
@@ -206,7 +205,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" id="estadocivil" name="estadocivil" value="4"></input>
+                                <input type="radio" id="estadocivil" name="estadocivil" value="Soletero"></input>
 
                                 Soltero
                             </label>
@@ -214,7 +213,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" id="estadocivil" name="estadocivil" value="5"></input>
+                                <input type="radio" id="estadocivil" name="estadocivil" value="Viudo"></input>
 
                                 Viudo
                             </label>
@@ -230,8 +229,7 @@
                                 <?php
                                         $consultamunicipios = "SELECT * FROM municipios";
                                         echo $consultamunicipios;
-                                        $resultado= $conn->ejecutarQuery($consultamunicipios);
-                            
+                                        $resultado= $conn->ejecutarQuery($consultamunicipios);                            
                                         while($row=mysqli_fetch_array($resultado))
                                              {?>
                                 <option value="<?php echo $row["id_municipio"] ?> ">
@@ -386,9 +384,9 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" id="regimenseguridadsocial" name="regimenseguridadsocial">
-                                <option value="0">Contributivo</option>
-                                <option value="1">Subsidiado</option>
-                                <option value="2">Ninguno</option>
+                                <option value="Contributivo">Contributivo</option>
+                                <option value="Subsidiado">Subsidiado</option>
+                                <option value="Ninguno">Ninguno</option>
                             </select>
                         </div>
                     </div>
@@ -417,27 +415,22 @@
                     <label class="control-label col-md-2" for="cotizapension">Cotiza Pension:</label>
 
                     <div class="col-md-2">
-                        <!-- <input type="text" class="form-control" id="nombre" placeholder="Nombre"> -->
-
                         <div class="radio">
                             <label>
-                                <input type="radio" name="cotizapension" id="cotizapension" value="0"
-                                    checked="checked"></input>
+                                <input type="radio" name="cotizapension" id="cotizapension" value="Si"
+                                    checked="checked">
                                 Si
                             </label>
                         </div>
-
                         <div class="radio">
                             <label>
-                                <input type="radio" name="cotizapension" id="cotizapension" value="1"></input>
-
+                                <input type="radio" name="cotizapension" id="cotizapension" value="No">
                                 No
                             </label>
                         </div>
                     </div>
 
                     <label class="control-label col-md-2" for="tiempopension">Años de Pension :</label>
-
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" name='tiempopension' id="tiempopension">
@@ -479,7 +472,6 @@
                     <!-- tabla tbl_Fondopennsiones campo id_fondopensiones -->
 
                     <label class="control-label col-md-2" for="fpension">Fondo de Pensiones :</label>
-
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" name='fpension' id="fpension">
@@ -564,10 +556,10 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <select class="form-control" name="ocupacion" id="ocupacion">
-                                <option value="mototaxista">Mototaxista</option>
-                                <option value="empleado">Empleado</option>
-                                <option value="desempleado">Desempleado</option>
-                                <option value="independiente">Independiente</option>
+                                <option value="Mototaxista">Mototaxista</option>
+                                <option value="Empleado">Empleado</option>
+                                <option value="Desempleado">Desempleado</option>
+                                <option value="Independiente">Independiente</option>
                             </select>
                         </div>
                     </div>
@@ -606,21 +598,21 @@
                     <div class="col-md-2">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="0"
+                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="Contrato"
                                     checked="checked">
                                 Contrato
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="1">
+                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="Independiente">
                                 Independiente
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="1"></input>
+                                <input type="radio" name="tipovinculacion" id="tipovinculacion" value="Obra labor"></input>
                                 Obra labor
                             </label>
                         </div>
@@ -847,29 +839,28 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="sp_1" id="sp_1">
+                                <input type="checkbox" name="sp_1" id="sp_1" value="Con Agua Potable">
                                 Agua
                             </label>
                         </div>             
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="sp_2" id="sp_2" value="1"></input>
+                                <input type="checkbox" name="sp_2" id="sp_2" value="Con Alcantarillado">
                                 Alcantarillado
                             </label>
                         </div>
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="sp_3" id="sp_3" value="1"></input>
+                                <input type="checkbox" name="sp_3" id="sp_3" value="Con energia Electrica">
                                 Energia Electrica
                             </label>
                         </div>
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="sp_4" id="sp_4" value="1"></input>
-
+                                <input type="checkbox" name="sp_4" id="sp_4" value="Con Tv Cable">
                                 Tv
                                 Cable
                             </label>
@@ -877,14 +868,14 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="sp_5" id="sp_5" value="1"></input>
+                                <input type="checkbox" name="sp_5" id="sp_5" value="Con Internet">
                                 Internet
                             </label>
                         </div>
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="sp_6" id="sp_6" value="1"></input>
+                                <input type="checkbox" name="sp_6" id="sp_6" value="Con Telefono Fijo">
                                 Telefono
                             </label>
                         </div>
@@ -898,14 +889,14 @@
                     <div class="col-md-2">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="actprincipalspub" id="actprincipalspub" value="1"
+                                <input type="radio" name="actprincipalspub" id="actprincipalspub" value="Si"
                                     checked="checked"></input>
                                 Si
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="actprincipalspub" id="actprincipalspub" value="0"></input>
+                                <input type="radio" name="actprincipalspub" id="actprincipalspub" value="No"></input>
                                 No
                             </label>
                         </div>
@@ -918,7 +909,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="actprincipalspar" id="actprincipalspar" value="1"
+                                <input type="radio" name="actprincipalspar" id="actprincipalspar" value="Si"
                                     checked="checked"></input>
                                 Si
                             </label>
@@ -926,7 +917,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="actprincipalspar" id="actprincipalspar" value="0"></input>
+                                <input type="radio" name="actprincipalspar" id="actprincipalspar" value="No"></input>
 
                                 No
                             </label>
@@ -1028,14 +1019,14 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="actividadcomplementaria" id="actividadcomplementaria"
-                                    value="1" checked="checked">
+                                    value="Si" checked="checked">
                                 Si
                             </label>
                         </div>
                         <div class="radio">
                             <label>
                                 <input type="radio" name="actividadcomplementaria" id="actividadcomplementaria"
-                                    value="0">
+                                    value="No">
                                 No
                             </label>
                         </div>
@@ -1092,15 +1083,15 @@
                             </label>
                         </div>
                       </div>
-                             <div class="col-md-4">                          
-                                <input type="text" class="form-control" name="cualorganizacion" id="cualorganizacion"
-                                    placeholder="Ninguna o Nombre organizacion">                           
-                            </div>
+
+                    <div class="col-md-4">                          
+                    <input type="text" class="form-control" name="cualorganizacion" id="cualorganizacion" 
+                             placeholder="Ninguna o Nombre organizacion">                           
+                    </div>
                         
                    
 
                     <label class="control-label col-md-3" for="caracterizado">Lo han caracterizado:</label>
-
                     <div class="col-md-3">
                         <div class="radio">
                             <label>
@@ -1116,6 +1107,7 @@
                             </label>
                         </div>
                     </div>
+
                     <div class="col-md-6">
                     <label class="control-label " for="entidadcaracterizo">Que entidad lo caracterizo:</label>
                     <input type="text" class="form-control " name="entidadcaracterizo" id="entidadcaracterizo" placeholder="Ninguna o Nombre Entidad">                                              
@@ -1196,7 +1188,7 @@
                             grupo familiar:
                         </label>
                         <div class="col-md-3">
-                          <input type="number" class="form-control" id="ingresosfamiliar" name="ingresosfamiliar" placeholder="250000"
+                          <input type="number" class="form-control" id="ingresosfamiliar" name="ingresosfamiliar" placeholder="250000" 
                                 required="required">
                         </div>
                         <label class="control-label col-md-3" for="otrosingresosfamiliar">
@@ -1366,9 +1358,7 @@
                                     <?php echo $row["nomb_cargo"] ?>
                                 </option>
                                 <?php } ?>
-                            </select>
-                            
-                           
+                            </select>                           
                         </div>
 
                         <h6 class="col-md-12">Tipo actividad productiva</h6>
@@ -1589,7 +1579,7 @@
                 <div class="input-group">
                     <label class="control-label col-md-6" for="dependenciaeconomica">
                         Cuantas personas depende
-                        economicamnete de su actividad laboral :
+                        economicamente de su actividad laboral :
                     </label>
 
                     <div class="col-md-6">
@@ -1606,8 +1596,6 @@
 
                     <div class="col-md-6">
                         <div class="text">
-                            <!-- <input type="text" class="form-control" name="tiempomototaxismo" id="tiempomototaxismo"> -->
-
                             <textarea class="form-control" name="tiempomototaxismo"
                                 id="tiempomototaxismo">Tiempo en años</textarea>
                         </div>
@@ -1639,12 +1627,10 @@
                         </div>
                     </div>
 
-                    <label class="control-
-                    label col-md-4" for="actividadrentable"></label>
-
-                    <input class="form-control col-md-4" type="date" id="fechadiligenciamiento"
+                    <label class="control-label col-md-4" for="fechadiligenciamiento">Fecha De Diligenciamiento</label>
+                    <input class="form-control col-md-2" type="date" id="fechadiligenciamiento"
                      name="fechadiligenciamiento">
-                </div>
+                    </div>
             </div>
              <div class="container">
         <div class="form-group" class="col-md-12">

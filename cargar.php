@@ -36,32 +36,32 @@ $habitacionesviviendaform=$_POST['habitacionesvivienda'];
 if (isset($_POST["sp_1"])) {
    $sp_1form=$_POST['sp_1'];
 } else {
-   $sp_1form=0;
+   $sp_1form='Sin Agua Potable';
 }
 if (isset($_POST["sp_2"])) {
    $sp_2form=$_POST['sp_2'];
 } else {
-   $sp_2form=0;
+   $sp_2form='Sin Alcantarilllado';
 }
 if (isset($_POST["sp_3"])) {
    $sp_3form=$_POST['sp_3'];
 } else {
-   $sp_3form=0;
+   $sp_3form='Sin Energia electrica';
 }
 if (isset($_POST["sp_4"])) {
    $sp_4form=$_POST['sp_4'];
 } else {
-   $sp_4form=0;
+   $sp_4form='Sin Tv Cable';
 }
 if (isset($_POST["sp_5"])) {
    $sp_5form=$_POST['sp_5'];
 } else {
-   $sp_5form=0;
+   $sp_5form='Sin Internet';
 }
 if (isset($_POST["sp_6"])) {
    $sp_6form=$_POST['sp_6'];
 } else {
-   $sp_6form=0;
+   $sp_6form='Sin Telefono Fijo';
 }
 $actprincipalspubform=$_POST['actprincipalspub'];
 $actprincipalsparform=$_POST['actprincipalspar'];
