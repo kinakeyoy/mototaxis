@@ -21,41 +21,47 @@
         </div>
     </header>
 <!-- Navbar Menu inicio -->
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-success">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">MotoSoft-<strong>Administrador</strong></a>
-            <ul class="navbar-nav  nav-tabs mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link " href="nuevoadmin.html">Nuevo <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="consultaadmin.html">Consulta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="crearencuestadoradmin.html">Crear Encuestador</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="reporteadmin.html">Reporte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-danger" href="index.html" role="button">Cerrar Sesion</a>
-                </li>
 
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                    <a href="index.html">
-                        <button class="btn btn-outline-danger my-2 my-sm-0">Cerrar Sesion</button>
-                    </a>
-                </form> -->
-        </div>
-    </nav>
-</div>
-<!-- Navbar Menu fin -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">
+                    MotoSoft-<strong>SuperAdmin</strong>
+                </a>
+
+                <ul class="navbar-nav  nav-tabs mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="sadmin.html">
+                            <h5>Nuevo</h5>
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="consultasadmin.php"><h5>Consulta</h5></a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="editarsadmin.php"><h5>Editar</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reporte.php"><h5>Reporte</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="crearsadmin.html"><h5>Crear Administrador</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-danger" href="index.html" role="button"><h5>Cerrar Sesion</h5></a>
+                    </li>
+                </ul>             
+            </div>
+        </nav>
+    </div>
+
+    <!-- Navbar Menu fin -->
 </head>
 
 <body>

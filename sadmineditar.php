@@ -4,29 +4,29 @@
     $conn->initConexion("mototaxis");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Diagnostico de Caracterizacion SocieEconomica</title>
     <!-- CSS de Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/misestilos.css" rel="stylesheet" media="screen">
-
-
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="css/misestilos.css" rel="stylesheet" media="screen" />
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <header>
         <div class="container">
-            <br>
-            <img width="100%" src="img/banner-f.png">
+            <br />
+            <img width="100%" src="img/banner-f.png" />
             <h3>Diagnostico de Caracterizacion SocieEconomica</h3>
-                <h3>Diagnostico de Caracterizacion SocieEconomi</h3>
         </div>
     </header>
-<!-- Navbar Menu inicio -->
+      <!-- Navbar Menu inicio -->
 
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-success">
@@ -47,14 +47,14 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="consultasadmin.php"><h5>Consulta</h5></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultasadmin.php"><h5>Consulta</h5></a>
                     </li>                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="sadmineditar.php"><h5>Editar</h5></a>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="editarsadmin.php"><h5>Editar</h5></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reporte.php"><h5>Reporte</h5></a>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="reporte.php"><h5>Reporte</h5></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="crearsadmin.html"><h5>Crear Administrador</h5></a>
@@ -62,51 +62,25 @@
                     <li class="nav-item">
                         <a class="btn btn-outline-danger" href="index.html" role="button"><h5>Cerrar Sesion</h5></a>
                     </li>
-                </ul>             
+                </ul>
+           
             </div>
         </nav>
     </div>
 
     <!-- Navbar Menu fin -->
 </head>
+</head>
 
 <body>
-     <script type="text/javascript">
-        var perfil = localStorage.getItem("perfil");
-        if (perfil != 1) {
-            console.log('Diferente de 1');
-            console.log(perfil);
-            swal("ERROR !!", "Modulo Restringido para su usuario");
-            window.location.href = "index.html";
-        }
-        else {
-            console.log('else perfil');
-            console.log(perfil);
-        }
-    </script>
-    <div class="container">
-        <br>
-        <!-- form busqueda x cedula-->
-        <form action="consultarcc.php" method="POST">
-        <div class="form-row ">
-            <label class="control-label col-md-4" for="nombre">
-                <h4> Digite Cedula de Ciudadano:</h4>
-            </label>
-            <div class="col-md-4">
-                <input class="form-control" type="number" placeholder="CC" name="cc" id="cc" required>
-            </div>
-              <div class="col-md-4">
-           <button type="submit"  class="btn btn-primary btn-lg btn-block">Buscar</button>
-             </div>
-        </div>
-       </form>
-        <!-- Search form -->        
 
-        <!-- 
+<br>
+<center>
+<button type="button" class="btn btn-warning">Editar</button>
+</center>
 
     <!-- Librería jQuery requerida por los plugins de JavaScript -->
     <script src="http://code.jquery.com/jquery.js "></script>
-
     <!-- Todos los plugins JavaScript de Bootstrap (también puedes
          incluir archivos JavaScript individuales de los únicos
          plugins que utilices) -->

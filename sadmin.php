@@ -27,6 +27,8 @@
 
     <link href="css/misestilos.css" rel="stylesheet" media="screen">
     </link>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
     <!-- libreria de swat alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -35,9 +37,7 @@
     <header>
         <div class="container">
             <br>
-
             <img width="100%" src="img/banner-f.png">
-
             <h3>
                 Diagnostico de Caracterizacion SocieEconomica
             </h3>
@@ -45,7 +45,6 @@
     </header>
 
     <!-- Navbar Menu inicio -->
-
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-success">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
@@ -55,46 +54,35 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="#">
-                    MotoSoft-
-
-                    <strong>SuperAdmin</strong>
+                    MotoSoft-<strong>SuperAdmin</strong>
                 </a>
 
                 <ul class="navbar-nav  nav-tabs mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link active" href="sadmin.html">
-                            Nuevo
-
+                            <h5>Nuevo</h5>
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="consultasadmin.php">Consulta</a>
-                    </li>
-
+                        <a class="nav-link" href="consultasadmin.php"><h5>Consulta</h5></a>
+                    </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" href="reporte.html">Reporte</a>
+                        <a class="nav-link" href="sadmineditar.php"><h5>Editar</h5></a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="crearadmin.html">Crear Administrador</a>
+                        <a class="nav-link" href="reporte.php"><h5>Reporte</h5></a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="btn btn-outline-danger" href="index.html" role="button">Cerrar Sesion</a>
+                        <a class="nav-link" href="crearsadmin.html"><h5>Crear Administrador</h5></a>
                     </li>
-                </ul>
-
-                <!-- <form class="form-inline my-2 my-lg-0">
-                    <a href="index.html">
-                        <button class="btn btn-outline-danger my-2 my-sm-0">Cerrar Sesion</button>
-                    </a>
-                </form> -->
+                    <li class="nav-item">
+                        <a class="btn btn-outline-danger" href="index.html" role="button"><h5>Cerrar Sesion</h5></a>
+                    </li>
+                </ul>             
             </div>
         </nav>
     </div>
-
     <!-- Navbar Menu fin -->
 </head>
 
@@ -526,6 +514,7 @@
                                 <option value="8">8</option>
                                 <option value="9">9</option>
                                 <option value="10">10</option>                             
+                                <option value="10">10</option>  
                             </select>
                         </div>
                     </div>
@@ -726,9 +715,16 @@
                             </label>
                         </div>
 
-                        <div class="radio">
+                         <div class="radio">
                             <label>
                                 <input type="radio" name="tipovivienda" id="tipovivienda" value="4"></input>
+                                Invasion
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipovivienda" id="tipovivienda" value="5"></input>
                                 Otro
                             </label>
                         </div>
@@ -1264,7 +1260,7 @@
 
                         <label class="control-label col-md-4" for="tarjetadepropiedad">
                             Cuenta usted con tarjeta
-                            profesional del vehiculo:
+                            de propiedad del vehiculo:
                         </label>
 
                         <div class="col-md-2">
