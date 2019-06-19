@@ -1,3 +1,9 @@
+<?php
+    require("conector.php");
+    $conn = new ConectorBD();
+    $conn->initConexion("mototaxis");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +14,10 @@
     <title>Diagnostico de Caracterizacion SocieEconomica</title>
     <!-- CSS de Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/misestilos.css" rel="stylesheet" media="screen">
-
+    <link href="css/misestilos.css" rel="stylesheet" media="screen">  
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
+    <!-- librerías SwetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
     <header>
@@ -20,7 +28,7 @@
                 <h3>Diagnostico de Caracterizacion SocieEconomi</h3>
         </div>
     </header>
-  <!-- Navbar Menu inicio -->
+<!-- Navbar Menu inicio -->
 
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-success">
@@ -31,34 +39,26 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="#">
-                    MotoSoft-<strong>Administrador</strong>
+                    MotoSoft-<strong>Encuestador</strong>
                 </a>
+
                 <ul class="navbar-nav  nav-tabs mr-auto mt-2 mt-lg-0">
                     <li class="nav-item ">
-                        <a class="nav-link " href="admin3.php">
-                            Nuevo
+                        <a class="nav-link " href="encuestador1.php">
+                            <h5>Nuevo</h5>
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-
                     <li class="nav-item active">
-                        <a class="nav-link active" href="consultaadmin.php">Consulta</a>
-                    </li>
-
+                        <a class="nav-link active" href="consultaencuestador.php"><h5>Consulta</h5></a>
+                    </li>           
+                  
+                  
+                  
                     <li class="nav-item">
-                        <a class="nav-link" href="reporteadmin.php">Reporte</a>
+                        <a class="btn btn-outline-danger" href="index.html" role="button"><h5>Cerrar Sesion</h5></a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="crearencuestadoradmin.html">Crear Encuestador</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="btn btn-outline-danger" href="index.html" role="button">Cerrar Sesion</a>
-                    </li>
-                </ul>
-
-             
+                </ul>             
             </div>
         </nav>
     </div>
@@ -67,10 +67,23 @@
 </head>
 
 <body>
-      <div class="container">
+    <script type="text/javascript">
+        var perfil = localStorage.getItem("perfil");
+        if (perfil != 3) {
+            console.log('Diferente de 3');
+            console.log(perfil);
+            swal("ERROR !!", "Modulo Restringido para su usuario");
+            window.location.href = "index.html";
+        }
+        else {
+            console.log('else perfil');
+            console.log(perfil);
+        }
+    </script>
+    <div class="container">
         <br>
         <!-- form busqueda x cedula-->
-        <form action="consultarccadmin.php" method="POST">
+        <form action="consultarccencuestador.php" method="POST">
         <div class="form-row ">
             <label class="control-label col-md-4" for="nombre">
                 <h4> Digite Cedula de Ciudadano:</h4>
@@ -81,27 +94,15 @@
               <div class="col-md-4">
            <button type="submit"  class="btn btn-primary btn-lg btn-block">Buscar</button>
              </div>
-               </form>
        
             </div>
-     
+       </form>
+        <!-- Search form -->        
 
-
-
-
-   
-
-
-
-
-
-
-
-
+        <!-- 
 
     <!-- Librería jQuery requerida por los plugins de JavaScript -->
     <script src="http://code.jquery.com/jquery.js "></script>
-
     <!-- Todos los plugins JavaScript de Bootstrap (también puedes
          incluir archivos JavaScript individuales de los únicos
          plugins que utilices) -->

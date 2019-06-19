@@ -14,9 +14,9 @@ $(document).ready(function () {
       let usuario = formData2[0];
       let valor = false;
       let perfil = 0;
-      // console.log('user', usuario);
-      // console.log('pass', formData);
-      // console.log(datos.length)
+      console.log("user", usuario);
+      console.log("pass", formData);
+      console.log(datos.length);
       for (let i = 0; i < JSON.parse(datos).length; i++) {
         if (
           usuario == JSON.parse(datos)[i].nom_usuario &&
@@ -24,7 +24,7 @@ $(document).ready(function () {
         ) {
           perfil = JSON.parse(datos)[i].id_perfil;
           localStorage.setItem("perfil", perfil);
-          console.log('perfil ', perfil);
+          console.log("perfil ", perfil);
           valor = true;
           break;
         } else {
@@ -34,16 +34,21 @@ $(document).ready(function () {
 
       if (valor == true && perfil == 1) {
         window.location.href = "sadmin.php";
-        console.log('Valor: ', valor);
+        console.log("Valor: ", valor);
+        console.log("perfil ", perfil);
       } else if (valor == true && perfil == 2) {
-        window.location.href = "admin.php";
-        console.log('Valor: ', valor);
+        window.location.href = "admin3.php";
+        console.log("Valor: ", valor);
+        console.log("perfil ", perfil);
       } else if (valor == true && perfil == 3) {
-        window.location.href = "encuesta1.php";
-        console.log('Valor: ', valor);
+        window.location.href = "encuestador1.php";
+        console.log("Valor: ", valor);
+        console.log("perfil ", perfil);
       } else {
         // alert('Usuario inválido');
         swal("ERROR !!", "Usuario/Password inválido(s)", "error");
+        console.log("Valor: ", valor);
+        console.log("perfil ", perfil);
       }
     });
     // $("#nombre").val("");

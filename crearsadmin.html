@@ -88,7 +88,7 @@
 <body>
 
 
-    <div class="container col-md-10">
+    <div class="container">
         <br>
         <form class="form-horizontal" method="POST" action="registraradmin.php" id="frmajax" name="frmajax">
             <fieldset>
@@ -96,24 +96,23 @@
                 <p> Formulario para crear administradores o encuestadores</p>
                 <div class="form-group">
                     <div class="input-group">
-                        <label class="control-label col-md-2" for="cc">Cedula :</label>
-                        <div class="col-md-4">
+                        <label class="control-label col-md-3" for="cc">Cedula :</label>
+                        <div class="col-md-3">
                             <input type="number" class="form-control" id="cc" name="cc" placeholder="Cedula" value=""
                                 required="required" pattern="[^'\x22]+" title="campo con caracter no valido"></input>
                         </div>
                     </div>
                     <div class="input-group">
-                        <label class="control-label col-md-2" for="usuario">Usuario :</label>
-                        <div class="col-md-6">
+                        <label class="control-label col-md-3" for="usuario">Usuario :</label>
+                        <div class="col-md-3">
                             <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario"
                                 value="" required="required" pattern="[^'\x22]+"
                                 title="campo con caracter no valido"></input>
                         </div>
                     </div>
                     <div class="input-group">
-                        <label class="control-label col-md-2" for="perfil">Perfil :</label>
-
-                        <div class="col-md-6">
+                        <label class="control-label col-md-3" for="perfil">Perfil :</label>
+                        <div class="col-md-3">
                             <select class="form-control" id="perfil" name="perfil">
                                 <option value="2">Administrador</option>
                                 <option value="3">Encuestador</option>
@@ -121,9 +120,8 @@
                         </div>
                     </div>
                     <div class="input-group">
-                        <label class="control-label col-md-2" for="contrasena">Contraseña :</label>
-
-                        <div class="col-md-6">
+                        <label class="control-label col-md-3" for="contrasena">Contraseña :</label>
+                        <div class="col-md-3">
                             <input type="text" class="form-control" id="contrasena" name="contrasena"
                                 placeholder="Contraseña" value="" required="required" pattern="[^'\x22]+"
                                 title="campo con caracter no valido"></input>
@@ -131,7 +129,7 @@
                     </div>
                     <br>
                     <div class="input-group">
-                        <div class="col-md-8">
+                        <div class="col-md-6">
                             <button name="#btnguardar" id="#btnguardar"
                                 class="btn btn-success btn-lg btn-block">Guardar</button>
                         </div>

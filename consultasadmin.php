@@ -14,8 +14,10 @@
     <title>Diagnostico de Caracterizacion SocieEconomica</title>
     <!-- CSS de Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/misestilos.css" rel="stylesheet" media="screen">
-
+    <link href="css/misestilos.css" rel="stylesheet" media="screen">  
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
+    <!-- librerías SwetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
     <header>
@@ -71,10 +73,10 @@
 </head>
 
 <body>
-     <script type="text/javascript">
+    <script type="text/javascript">
         var perfil = localStorage.getItem("perfil");
         if (perfil != 1) {
-            console.log('Diferente de 1');
+            console.log('Diferente de 2');
             console.log(perfil);
             swal("ERROR !!", "Modulo Restringido para su usuario");
             window.location.href = "index.html";
@@ -98,7 +100,8 @@
               <div class="col-md-4">
            <button type="submit"  class="btn btn-primary btn-lg btn-block">Buscar</button>
              </div>
-        </div>
+       
+            </div>
        </form>
         <!-- Search form -->        
 
@@ -106,7 +109,6 @@
 
     <!-- Librería jQuery requerida por los plugins de JavaScript -->
     <script src="http://code.jquery.com/jquery.js "></script>
-
     <!-- Todos los plugins JavaScript de Bootstrap (también puedes
          incluir archivos JavaScript individuales de los únicos
          plugins que utilices) -->
