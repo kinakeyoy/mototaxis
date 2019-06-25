@@ -40,11 +40,11 @@
 }
 
 
-.form button {
+.form button-1 {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #4caf50;
+    background: #0429f8;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -79,7 +79,7 @@
 .container {
     position: relative;
     z-index: 1;
-    max-width: 300px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -118,7 +118,6 @@
 }
 
 body {
-    background-image: url("http://st.gde-fon.com/wallpapers_original/408829_motocikl_motociklist_gorod_doroga_motocikly_1680x1050_www.Gde-Fon.com.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     width: auto;

@@ -81,19 +81,7 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-        var perfil = localStorage.getItem("perfil");
-        if (perfil != 2) {
-            console.log('Diferente de 2');
-            console.log(perfil);
-            swal("ERROR !!", "Modulo Restringido para su usuario");
-            window.location.href = "index.html";
-        }
-        else {
-            console.log('else perfil');
-            console.log(perfil);
-        }
-    </script>
+
 
     <div class="container">
         <br>

@@ -78,7 +78,7 @@
 </head>
 
 <body>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var perfil = localStorage.getItem("perfil");
         if (perfil != 3) {
             console.log('Diferente de 3');
@@ -90,7 +90,7 @@
             console.log('else perfil');
             console.log(perfil);
         }
-    </script>
+    </script> -->
 
     <div class="container">
         <br>

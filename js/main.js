@@ -1,11 +1,11 @@
-$(document).ready(function () {
-  $("#btnLogin").click(function () {
+$(document).ready(function() {
+  $("#btnLogin").click(function() {
     let formulario = $("#formlg").serialize();
     $.ajax({
       url: "login.php",
       type: "POST",
       data: formulario
-    }).done(function (datos) {
+    }).done(function(datos) {
       let data = JSON.parse(datos)[0];
       // console.log('Datos del uusario', data);
       let formData = formulario.split("=");
@@ -45,8 +45,21 @@ $(document).ready(function () {
         console.log("Valor: ", valor);
         console.log("perfil ", perfil);
       } else {
-        // alert('Usuario inválido');
-        swal("ERROR !!", "Usuario/Password inválido(s)", "error");
+        // alert("Usuario Inválido");
+        // swal("ERROR !!", "Usuario/Password inválido(s)", "error");
+        // <div class="alert">
+        //   <span
+        //     class="closebtn"
+        //     onclick="this.parentElement.style.display='none';"
+        //   >
+        //     &times;
+        //   </span>
+        //   This is an alert box.
+        // </div>;
+        <div class="alert alert-danger" role="alert">
+          This is a danger alert—check it out!
+        </div>;
+        console.log("Error login");
         console.log("Valor: ", valor);
         console.log("perfil ", perfil);
       }

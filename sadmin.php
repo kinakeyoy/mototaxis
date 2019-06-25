@@ -45,41 +45,47 @@
     </header>
 
     <!-- Navbar Menu inicio -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid col-sm-7">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="#">
-                    MotoSoft-<strong>SuperAdmin</strong>
+               Motosoft
                 </a>
+                  <ul class="navbar-nav nav-tabs mr-auto">
+                    <a class="nav-item nav-link active" href="sadmin.html">Nuevo</a>
+                    <a class="nav-link" href="consultasadmin.php">Consulta</a>
+                    <a class="nav-link" href="reporte.php">Reportes</a>
+                    <a class="nav-link" href="crearsadmin.html">Crear Administradores</a>
+                 </ul>
 
+              
+<!-- 
                 <ul class="navbar-nav  nav-tabs mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link active" href="sadmin.html">
-                            <h5>Nuevo</h5>
-                            <span class="sr-only">(current)</span>
+                            Nuevo                           
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="consultasadmin.php"><h5>Consulta</h5></a>
+                        <a class="nav-link" href="consultasadmin.php">Consulta</a>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" href="sadmineditar.php"><h5>Editar</h5></a>
+                        <a class="nav-link" href="sadmineditar.php">Editar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reporte.php"><h5>Reporte</h5></a>
+                        <a class="nav-link" href="reporte.php">Reportes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="crearsadmin.html"><h5>Crear Administrador</h5></a>
+                        <a class="nav-link" href="crearsadmin.html">Crear Administrador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-danger" href="index.html" role="button"><h5>Cerrar Sesion</h5></a>
+                        <a class="btn btn-outline-danger" href="index.html" role="button">Cerrar Sesion</a>
                     </li>
-                </ul>             
+                </ul>              -->
             </div>
         </nav>
     </div>
@@ -87,21 +93,9 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-        var perfil = localStorage.getItem("perfil");
-        if (perfil != 1) {
-            console.log('Diferente de 1');
-            console.log(perfil);
-            swal("ERROR !!", "Modulo Restringido para su usuario");
-            window.location.href = "index.html";
-        }
-        else {
-            console.log('else perfil');
-            console.log(perfil);
-        }
-    </script>
+  
 
-    <div class="container">
+    <div class="container-fluid col-sm-7 ">
         <br>
 
         <form class="form-horizontal" action="cargar.php" method="POST">
